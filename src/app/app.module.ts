@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TimeTrackingDashboardModule } from './time-tracking-dashboard/time-tracking-dashboard.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    TimeTrackingDashboardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

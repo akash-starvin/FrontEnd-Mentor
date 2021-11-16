@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="d-flex header vertical-align-center">
+    <img
+      src="./../../../../assets/time-tracking-dashboard/images/img-profile-jeremy.png"
+      alt="profile"
+    />
+    <div>
+      <span class="report-for">Report for</span>
+      <h3 class="name">Jeremy Robson</h3>
+    </div>
+  </div>
+  <div>
+    <ul class="d-flex remove-list-bullets navigation-menu">
+      <li
+        *ngFor="let item of timeFrames"
+        (click)="changeTimeFrame(item)"
+        [ngClass]="{ 'nav-active': activeTimeFrame === item }"
+      >
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</div>

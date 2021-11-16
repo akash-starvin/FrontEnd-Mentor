@@ -1,0 +1,28 @@
+<div
+  class="container"
+  [ngClass]="{
+    work: cardData.title === 'Work',
+    play: cardData.title === 'Play',
+    study: cardData.title === 'Study',
+    exercise: cardData.title === 'Exercise',
+    social: cardData.title === 'Social',
+    selfcare: cardData.title === 'Self Care'
+  }"
+>
+  <div class="d-flex flex-end w-100 header">
+    <img [src]="getImageSrc(cardData.title)"/>
+  </div>
+  <div class="body">
+    <div class="d-flex space-between w-100 vertical-align-center">
+      <span class="title">{{ cardData.title }}</span>
+      <img
+        src="./../../../../assets/time-tracking-dashboard/images/icon-ellipsis.svg"
+        alt="ellipsis"
+      />
+    </div>
+    <div class="body-time">
+      <span class="time">{{ getCurrentHours() | hours }}</span
+      ><span class="last-week-time">Last week - {{ getPreviousHours() | hours }}</span>
+    </div>
+  </div>
+</div>

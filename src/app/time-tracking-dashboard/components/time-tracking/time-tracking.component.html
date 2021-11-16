@@ -1,0 +1,9 @@
+<div class="page-wrapper">
+  <profile-card></profile-card>
+  <div class="event-card-wrapper">
+    <event-card
+      *ngFor="let item of jsonResponse"
+      [cardData]="item"
+    ></event-card>
+  </div>
+</div>
