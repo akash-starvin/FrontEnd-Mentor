@@ -1,0 +1,75 @@
+<div class="page-wrapper">
+  <img
+    src="./../../assets/tip-calculator/images/logo.svg"
+    alt="logo"
+    class="logo"
+  />
+  <div class="wrapper">
+    <div class="container">
+      <form>
+        <div class="d-flex flex-column bill-amount">
+          <div class="d-flex space-between">
+            <label class="input-label" for="billAmount">Bill</label>
+            <span class="error-message">Can't be zero</span>
+          </div>
+          <div class="position-relative">
+            <img
+              src="./../../assets/tip-calculator/images/icon-dollar.svg"
+              class="input-img"
+              alt="dollar"
+            />
+            <input
+              id="billAmount"
+              type="number"
+              [formControl]="billAmount"
+              placeholder="0"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="tip-buttons">
+          <span class="input-label">Select Tip %</span>
+          <div class="buttons-wrapper">
+            <button *ngFor="let item of btnPercentageValues" type="button">
+              {{ item | percentage }}
+            </button>
+            <div
+            class="custom-bill-amount">
+              <input
+                id="customAmount"
+                type="number"
+                [formControl]="customAmount"
+                placeholder="Custom"
+                class="custom-bill-amount"
+                autocomplete="off"
+
+                class="custom-bill-amount-input"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column number-of-people">
+          <div class="d-flex space-between">
+            <label class="input-label" for="billAmount">Number of people</label>
+            <span class="error-message">Can't be zero</span>
+          </div>
+          <div class="position-relative">
+            <img
+              src="./../../assets/tip-calculator/images/icon-person.svg"
+              class="input-img"
+              alt="person"
+            />
+            <input
+              id="noOfPeople"
+              type="number"
+              [formControl]="noOfPeople"
+              placeholder="0"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <tip-amount-card></tip-amount-card>
+  </div>
+</div>

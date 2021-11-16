@@ -1,0 +1,73 @@
+@use "/src/assets/sass/common.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik:wght@300;400;500&family=Space+Mono:wght@400;700&family=Spartan:wght@400;500;700&display=swap");
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dar-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$dark-grayish-cyan-2: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$light-grayish-cyan-2: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+.container {
+  padding: 30px;
+  background-color: $very-dar-cyan;
+  border-radius: 8px;
+  margin: 8px 16px 32px 16px;
+}
+
+.text-heading {
+  color: $white;
+  font-size: 14px;
+}
+
+.text-description {
+  color: $dark-grayish-cyan-2;
+}
+
+.amount {
+  color: $strong-cyan;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+button {
+  background-color: $strong-cyan;
+  color: $very-dar-cyan;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-grayish-cyan;
+  }
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+@media only screen and (min-width: 794px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 275px;
+    margin: 0;
+    height: calc(100% - 46px);
+  }
+
+  .amount {
+    font-size: 38px;
+  }
+}
+
+.text-heading,
+.text-description,
+.amount,
+button {
+  font-family: "Space Mono", sans-serif;
+}

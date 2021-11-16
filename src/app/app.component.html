@@ -1,6 +1,6 @@
 <mat-drawer-container class="container">
   <mat-drawer #drawer [mode]="mode.value"
-    ><ul class="d-flex remove-list-bullets">
+    ><ul class="remove-list-bullets">
       <li class="nav-item" *ngFor="let item of navItems" [routerLinkActive]="['nav-item-selected']">
         <a [routerLink]="item.routerLink" (click)="setNav(item.key)">{{
           item.displayName

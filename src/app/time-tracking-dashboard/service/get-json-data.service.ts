@@ -12,8 +12,6 @@ export class GetJsonDataService {
   constructor(private http: HttpClient) {}
 
   public getJSON(url: string): Observable<any> {
-    console.log("hy");
-
     return this.http.get(url);
   }
 }

@@ -13,6 +13,11 @@ export class AppComponent {
       routerLink: 'time-tracking-dashboard',
       displayName: 'Time Tracking Dashboard',
       key: 'time-tracking-dashboard',
+    },
+    {
+      routerLink: 'tip-calculator',
+      displayName: 'Tip Calculator',
+      key: 'tip-calculator',
     }
   ];
   selectedNav: string = 'time-tracking-dashboard';

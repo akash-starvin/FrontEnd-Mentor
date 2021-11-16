@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TimeTrackingDashboardModule } from './time-tracking-dashboard/time-tracking-dashboard.module';
+import { TipCalculatorModule } from './tip-calculator/tip-calculator.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,8 @@ import { TimeTrackingDashboardModule } from './time-tracking-dashboard/time-trac
     AppRoutingModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    TimeTrackingDashboardModule
+    TimeTrackingDashboardModule,
+    TipCalculatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],
