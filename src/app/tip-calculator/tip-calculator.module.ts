@@ -4,6 +4,7 @@ import { TipCalculatorComponent } from './components/tip-calculator/tip-calculat
 import { TipAmountCardComponent } from './components/tip-amount-card/tip-amount-card.component';
 import { PercentagePipe } from './pipes/percentage.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TipCalcutalorRoutingModule } from './tip-calcutalor-routing.module';
 
 
 
@@ -16,11 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    TipCalculatorComponent,
-    TipAmountCardComponent
+    ReactiveFormsModule,
+    TipCalcutalorRoutingModule
   ]
 })
 export class TipCalculatorModule { }

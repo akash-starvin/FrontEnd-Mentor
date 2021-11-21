@@ -5,6 +5,7 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HoursPipe } from './pipes/hours.pipe';
+import { TimeTrackingDashboardRoutingModule } from './time-tracking-dashboard-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,6 @@ import { HoursPipe } from './pipes/hours.pipe';
     TimeTrackingComponent,
     HoursPipe,
   ],
-  imports: [CommonModule, HttpClientModule],
-  exports: [TimeTrackingComponent, ProfileCardComponent, EventCardComponent],
+  imports: [CommonModule, HttpClientModule, TimeTrackingDashboardRoutingModule],
 })
 export class TimeTrackingDashboardModule {}

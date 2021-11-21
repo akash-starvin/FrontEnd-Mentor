@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TimeTrackingDashboardModule } from './time-tracking-dashboard/time-tracking-dashboard.module';
-import { TipCalculatorModule } from './tip-calculator/tip-calculator.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,9 +14,9 @@ import { TipCalculatorModule } from './tip-calculator/tip-calculator.module';
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    TimeTrackingDashboardModule,
-    TipCalculatorModule
+    TimeTrackingDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
