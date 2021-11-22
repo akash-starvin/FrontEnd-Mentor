@@ -1,0 +1,116 @@
+@use "/src/assets/sass/common.scss";
+
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  font-family: "Fraunces", sans-serif;
+}
+
+.container {
+  height: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./../../../../assets/sunnyside-agency-landing-page/images/mobile/image-header.jpg);
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.menu-wrapper {
+  display: none;
+}
+
+.overlay {
+  text-align: center;
+
+  h1 {
+    color: $white;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Fraunces", sans-serif;
+    line-height: 50px;
+    margin: 74px auto;
+  }
+}
+
+.popup-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 30px;
+  background-color: $white;
+  padding: 30px;
+  position: absolute;
+  width: -webkit-fill-available;
+  top: 70px;
+
+  .menu-text {
+    color: $grayish-blue;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: $yellow;
+    color: $very-dark-desaturated-blue;
+    padding: 17px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: max-content;
+    margin: 20px;
+  }
+}
+
+img{
+  height: fit-content;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    height: 100vh;
+    background-position: center bottom;
+    background-size: cover;
+    background-image: url(./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-header.jpg);
+  }
+
+  .menu-wrapper {
+    display: block;
+
+    .menu-text {
+      color: $white;
+      cursor: pointer;
+      padding: 0 30px;
+    }
+
+    button {
+      background-color: $white;
+      padding: 17px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      width: max-content;
+    }
+  }
+
+  .overlay {
+    h1 {
+      font-size: 60px;
+      margin: 150px auto;
+    }
+  }
+
+  .burger-icon,
+  .popup-menu {
+    display: none;
+  }
+}

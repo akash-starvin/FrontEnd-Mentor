@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="logo-wrapper">
+    <img
+      src="./../../../../assets/sunnyside-agency-landing-page/icons/logo.svg"
+      alt="logo"
+    /><img
+      class="burger-icon cursor-pointer"
+      src="./../../../../assets/sunnyside-agency-landing-page/icons/icon-hamburger.svg"
+      alt="menu"
+      (click)="toggleMenu()"
+    />
+    <div class="menu-wrapper">
+      <span class="menu-text">About</span>
+      <span class="menu-text">Services</span>
+      <span class="menu-text">Projects</span>
+      <button class="remove-btn-class">CONTACT</button>
+    </div>
+  </div>
+  <div class="overlay">
+    <h1>WE ARE CREATIVES</h1>
+    <img
+      src="./../../../../assets/sunnyside-agency-landing-page/icons/icon-arrow-down.svg"
+      alt=""
+    />
+  </div>
+  <div class="popup-menu" *ngIf="showMenu">
+    <span class="menu-text">About</span>
+    <span class="menu-text">Services</span>
+    <span class="menu-text">Projects</span>
+    <button class="remove-btn-class">CONTACT</button>
+  </div>
+</div>
