@@ -1,0 +1,53 @@
+
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+
+.container {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .text-overlay {
+    position: absolute;
+    text-align: center;
+    color: $very-dark-grayish-blue;
+    bottom: 45px;
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 18px;
+      font-size: 14px;
+      padding: 0 35px;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+
+    img {
+      width: 950px;
+    }
+
+    .text-overlay {
+      bottom: 140px;
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0 230px;
+      }
+    }
+  }
+}

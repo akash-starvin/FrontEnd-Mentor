@@ -1,11 +1,25 @@
 <page-header></page-header>
-<section class="d-flex flex-column">
+<div class="d-flex flex-column">
   <div class="section1 mt">
-    <img src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-transform.jpg" alt="">
+    <img
+      src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-transform.jpg"
+      alt=""
+    />
     <text-card [data]="textCardData[0]" id="text-card"></text-card>
   </div>
   <div class="section1 flex-unset">
-    <img src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-stand-out.jpg" alt="">
+    <img
+      src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-stand-out.jpg"
+      alt=""
+    />
     <text-card [data]="textCardData[1]" id="text-card"></text-card>
   </div>
-</section>
+</div>
+<div class="fruit-card">
+  <fruit-card
+    [data]="fruitCardData[0]"
+  ></fruit-card>
+  <fruit-card
+    [data]="fruitCardData[1]"
+  ></fruit-card>
+</div>

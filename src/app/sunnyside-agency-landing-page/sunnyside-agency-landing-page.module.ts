@@ -5,13 +5,15 @@ import { SunnysideAgencyLandingPageRoutingModule } from './sunnyside-agency-land
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { TextCardComponent } from './components/text-card/text-card.component';
+import { FruitCardComponent } from './components/fruit-card/fruit-card.component';
 
 
 @NgModule({
   declarations: [
     LandingPageComponent,
     PageHeaderComponent,
-    TextCardComponent
+    TextCardComponent,
+    FruitCardComponent
   ],
   imports: [
     CommonModule,
