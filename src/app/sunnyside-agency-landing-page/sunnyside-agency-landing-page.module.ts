@@ -8,6 +8,7 @@ import { TextCardComponent } from './components/text-card/text-card.component';
 import { FruitCardComponent } from './components/fruit-card/fruit-card.component';
 import { FeedbackCardComponent } from './components/feedback-card/feedback-card.component';
 import { ImageCardComponent } from './components/image-card/image-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ImageCardComponent } from './components/image-card/image-card.component
     TextCardComponent,
     FruitCardComponent,
     FeedbackCardComponent,
-    ImageCardComponent
+    ImageCardComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
