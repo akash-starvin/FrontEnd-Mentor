@@ -59,6 +59,14 @@ export class LandingPageComponent implements OnInit {
       designation: 'Business Owner',
     }
   ];
+
+  imageCardData = [
+    '../../../../assets/sunnyside-agency-landing-page/images/desktop/image-gallery-milkbottles.jpg',
+    '../../../../assets/sunnyside-agency-landing-page/images/desktop/image-gallery-orange.jpg',
+    '../../../../assets/sunnyside-agency-landing-page/images/desktop/image-gallery-cone.jpg',
+    '../../../../assets/sunnyside-agency-landing-page/images/desktop/image-gallery-sugarcubes.jpg'
+  ]
+
   constructor() {}
 
   ngOnInit(): void {}

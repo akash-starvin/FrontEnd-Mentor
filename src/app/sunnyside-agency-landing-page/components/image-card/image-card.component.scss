@@ -1,0 +1,18 @@
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  img{
+    max-width: 205.5px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .container{
+    display: flex;
+
+    img{
+      max-width: 528px;
+    }
+  }
+}
