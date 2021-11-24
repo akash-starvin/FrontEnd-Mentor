@@ -1,13 +1,13 @@
 <page-header></page-header>
 <div class="d-flex flex-column">
-  <div class="section1 mt">
+  <div class="text-card-section mt">
     <img
       src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-transform.jpg"
       alt=""
     />
     <text-card [data]="textCardData[0]" id="text-card"></text-card>
   </div>
-  <div class="section1 flex-unset">
+  <div class="text-card-section flex-unset">
     <img
       src="./../../../../assets/sunnyside-agency-landing-page/images/desktop/image-stand-out.jpg"
       alt=""
@@ -16,10 +16,6 @@
   </div>
 </div>
 <div class="fruit-card">
-  <fruit-card
-    [data]="fruitCardData[0]"
-  ></fruit-card>
-  <fruit-card
-    [data]="fruitCardData[1]"
-  ></fruit-card>
+  <fruit-card *ngFor="let card of fruitCardData" [data]="card"></fruit-card>
 </div>
+<feedback-card [data]="feedbackCardData"></feedback-card>

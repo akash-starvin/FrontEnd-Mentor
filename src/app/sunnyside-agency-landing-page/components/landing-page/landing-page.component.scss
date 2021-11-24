@@ -7,7 +7,7 @@
   font-family: "Barlow", "Fraunces", sans-serif;
 }
 
-.section1 {
+.text-card-section {
   img {
     width: 100%;
     height: 100%;
@@ -26,7 +26,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .section1 {
+  .text-card-section {
     display: flex;
     flex-direction: row-reverse;
   }
@@ -40,5 +40,6 @@
 
   .fruit-card{
     display: flex;
+    flex-direction: row;
   }
 }

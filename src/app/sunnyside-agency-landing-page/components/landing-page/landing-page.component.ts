@@ -16,7 +16,7 @@ export class LandingPageComponent implements OnInit {
       heading: 'Stand out to the right audience',
       description:
         'Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.',
-    }
+    },
   ];
 
   fruitCardData = [
@@ -33,10 +33,33 @@ export class LandingPageComponent implements OnInit {
       title: 'Photography',
       description:
         'Increase your credibility by getting the most stunning, high-quality photos that improve your business image.',
+    },
+  ];
+
+  feedbackCardData = [
+    {
+      imageUrl: '../../../../assets/sunnyside-agency-landing-page/images/image-emily.jpg',
+      feedback:
+        'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+      name: 'Emily R.',
+      designation: 'Marketing Director',
+    },
+    {
+      imageUrl: '../../../../assets/sunnyside-agency-landing-page/images/image-thomas.jpg',
+      feedback:
+        'Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.',
+      name: 'Thomas S.',
+      designation: 'Chief Operating Officer',
+    },
+    {
+      imageUrl: '../../../../assets/sunnyside-agency-landing-page/images/image-jennie.jpg',
+      feedback:
+        'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!',
+      name: 'Jennie F.',
+      designation: 'Business Owner',
     }
   ];
   constructor() {}
 
   ngOnInit(): void {}
-
 }

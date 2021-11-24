@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>CLIENT TESTINOMIALS</h3>
+  <div class="cards-wrapper">
+    <div class="card" *ngFor="let card of data">
+      <img [src]="card.imageUrl" alt="" />
+      <p>{{ card.feedback }}</p>
+      <h5>{{ card.name }}</h5>
+      <span>{{ card.designation }}</span>
+    </div>
+  </div>
+</div>

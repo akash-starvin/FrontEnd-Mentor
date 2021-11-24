@@ -6,6 +6,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { TextCardComponent } from './components/text-card/text-card.component';
 import { FruitCardComponent } from './components/fruit-card/fruit-card.component';
+import { FeedbackCardComponent } from './components/feedback-card/feedback-card.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FruitCardComponent } from './components/fruit-card/fruit-card.component
     LandingPageComponent,
     PageHeaderComponent,
     TextCardComponent,
-    FruitCardComponent
+    FruitCardComponent,
+    FeedbackCardComponent
   ],
   imports: [
     CommonModule,
