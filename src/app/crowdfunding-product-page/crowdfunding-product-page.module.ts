@@ -5,13 +5,15 @@ import { CrowdfundingProductPageRoutingModule } from './crowdfunding-product-pag
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    StatsComponent
   ],
   imports: [
     CommonModule,
