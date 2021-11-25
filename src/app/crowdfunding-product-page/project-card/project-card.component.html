@@ -1,0 +1,22 @@
+<div class="container">
+  <img
+    class="logo"
+    src="../../../assets/crowdfunding-product-page/icons/logo-mastercraft.svg"
+    alt="logo"
+  />
+  <h1>Mastercraft Bamboo Monitor Riser</h1>
+  <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+  <div class="d-flex space-between button-wrapper">
+    <button class="btn-main remove-btn-class cursor-pointer">
+      Back this project
+    </button>
+
+    <div class="d-flex btn-bookmark vertical-align-center cursor-pointer" (click)="addToBookmark()">
+      <img
+        src="../../../assets/crowdfunding-product-page/icons/icon-bookmark.svg"
+        alt="Bookmark"
+        height="50"
+      /><span [ngClass]="{'bookmarked': isBookmarked}">Bookmark</span>
+    </div>
+  </div>
+</div>

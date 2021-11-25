@@ -1,0 +1,89 @@
+@use "/src/assets/sass/common.scss";
+
+$dark-gray: hsl(0, 0%, 48%);
+$moderate-cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+
+.container {
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px 30px 30px 30px;
+}
+
+.logo {
+  margin-top: -50px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Commissioner", sans-serif;
+  padding: 0 30px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Commissioner", sans-serif;
+  color: $dark-gray;
+  line-height: 24px;
+}
+
+.button-wrapper {
+  padding: 20px 0;
+}
+
+.btn-main {
+  color: white;
+  background-color: $moderate-cyan;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 18px 42px;
+
+  &:hover {
+    background-color: darkcyan;
+  }
+}
+
+.btn-bookmark span {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 630px;
+    padding: 20px 70px 30px 70px;
+  }
+
+  h1 {
+    padding-top: 16px;
+    font-size: 32px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  .button-wrapper {
+    padding: 30px 0;
+  }
+
+  .btn-bookmark {
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+
+    span {
+      display: block;
+      font-weight: 700;
+      padding: 12px 18px;
+      color: $dark-gray;
+    }
+  }
+
+  .btn-bookmark .bookmarked {
+    color: darkcyan;
+  }
+}
