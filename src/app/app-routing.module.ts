@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'sunnyside-agency-landing-page',
     loadChildren: () => import('./sunnyside-agency-landing-page/sunnyside-agency-landing-page.module').then(m => m.SunnysideAgencyLandingPageModule)
+  },
+  {
+    path: 'crowdfunding-product-page',
+    loadChildren: () => import('./crowdfunding-product-page/crowdfunding-product-page.module').then(m => m.CrowdfundingProductPageModule)
   }
 ];
 @NgModule({

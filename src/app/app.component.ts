@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'crowdfunding-product-page',
+      displayName: 'Crowdfunding Product Page',
+      key: 'crowdfunding-product-page',
+    },
+    {
       routerLink: 'sunnyside-agency-landing-page',
       displayName: 'Sunnyside Agency Landing Page',
       key: 'sunnyside-agency-landing-page',
