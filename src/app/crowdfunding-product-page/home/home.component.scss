@@ -12,6 +12,13 @@ $dark-gray: hsl(0, 0%, 48%);
 .content-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: -50px 0 20px 0;
+  margin: -50px 20px 20px 20px;
+  width: calc(100% - 40px);
+}
+
+@media only screen and (min-width: 768px) {
+  .content-wrapper {
+    width: 100%;
+    margin: -50px 0 20px 0;
+  }
 }
