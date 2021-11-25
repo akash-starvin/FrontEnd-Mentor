@@ -1,0 +1,24 @@
+<div class="position-relative container">
+  <div class="d-flex space-between logo-wrapper">
+    <img
+      src="../../../assets/crowdfunding-product-page/icons/logo.svg"
+      alt="logo"
+    /><img
+      class="burger-icon cursor-pointer"
+      src="../../../assets/crowdfunding-product-page/icons/icon-hamburger.svg"
+      alt="menu"
+      (click)="toggleMenu()"
+      height="15"
+    />
+    <div class="menu-wrapper">
+      <span class="menu-text">About</span>
+      <span class="menu-text">Discover</span>
+      <span class="menu-text">Get Started</span>
+    </div>
+  </div>
+  <div class="d-flex flex-column position-absolute popup-menu" *ngIf="showMenu">
+    <span class="menu-text">About</span>
+    <span class="menu-text">Discover</span>
+    <span class="menu-text">Get Started</span>
+  </div>
+</div>

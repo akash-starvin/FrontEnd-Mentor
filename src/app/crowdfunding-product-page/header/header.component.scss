@@ -1,0 +1,73 @@
+@use "/src/assets/sass/common.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Commissioner:wght@400;500;700&family=Fraunces:ital,wght@0,800;1,700&family=Poppins:wght@400;600&family=Rubik:wght@300;400;500&family=Space+Mono:wght@400;700&family=Spartan:wght@400;500;700&display=swap");
+
+$black: hsl(0, 0%, 0%);
+
+* {
+  font-family: "Commissioner", sans-serif;
+}
+
+.container {
+  min-height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../../assets/crowdfunding-product-page/images/background-mobile.jpg);
+}
+
+.logo-wrapper {
+  padding: 30px;
+}
+
+.menu-wrapper {
+  display: none;
+}
+
+.popup-menu {
+  margin: 30px;
+  background-color: white;
+  width: -webkit-fill-available;
+  top: 46px;
+  border-radius: 12px;
+
+  .menu-text {
+    color: $black;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 21px;
+    cursor: pointer;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-top: 1px solid rgba(122, 122, 122, 0.3);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    min-height: 40vh;
+    background-image: url(../../../assets/crowdfunding-product-page/images/background-desktop.jpg);
+  }
+
+  .logo-wrapper {
+    padding: 50px 150px;
+  }
+
+  .menu-wrapper {
+    display: block;
+
+    .menu-text {
+      color: white;
+      cursor: pointer;
+      padding: 0 16px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .burger-icon {
+    display: none;
+  }
+}
