@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { StatsComponent } from './stats/stats.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { StatsComponent } from './stats/stats.component';
     HomeComponent,
     HeaderComponent,
     ProjectCardComponent,
-    StatsComponent
+    StatsComponent,
+    AboutComponent
   ],
   imports: [
     CommonModule,

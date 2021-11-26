@@ -1,0 +1,35 @@
+$dark-gray: hsl(0, 0%, 48%);
+
+.about-container {
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px 30px 30px 30px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "Commissioner", sans-serif;
+  }
+
+  p {
+    font-size: 15px;
+    color: $dark-gray;
+    font-family: "Commissioner", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-container {
+    width: 630px;
+    padding: 20px 70px 30px 70px;
+
+    h1{
+      font-size: 24px;
+    }
+
+    p{
+      padding: 10px 0;
+    }
+  }
+}
