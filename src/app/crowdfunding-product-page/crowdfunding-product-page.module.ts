@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { StatsComponent } from './stats/stats.component';
 import { AboutComponent } from './about/about.component';
+import { PledgeCardComponent } from './pledge-card/pledge-card.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     ProjectCardComponent,
     StatsComponent,
-    AboutComponent
+    AboutComponent,
+    PledgeCardComponent
   ],
   imports: [
     CommonModule,

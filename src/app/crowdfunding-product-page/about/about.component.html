@@ -13,5 +13,7 @@
     space below your computer to allow notepads, pens, and USB sticks to be
     stored under the stand.
   </p>
-  <div class="cards-wrapper"></div>
+  <div class="cards-wrapper">
+    <pledge-card *ngFor="let cardData of pledgeCardsData" [data]="cardData"></pledge-card>
+  </div>
 </div>

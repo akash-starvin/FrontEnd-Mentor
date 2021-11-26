@@ -1,0 +1,22 @@
+<div class="pledge-card-container">
+  <div class="card-header">
+    <h3>{{ data.title }}</h3>
+    <p class="amount">{{ data.amount }}</p>
+  </div>
+  <p class="description">{{ data.description }}</p>
+  <div class="card-footer">
+    <div class="d-flex vertical-align-center">
+      <h1 class="stock">{{ data.stock }}</h1>
+      <p>left</p>
+    </div>
+    <button
+      *ngIf="data.stock"
+      class="select-reward remove-btn-class cursor-pointer"
+    >
+      Select Reward
+    </button>
+    <button *ngIf="!data.stock" class="out-of-stock remove-btn-class">
+      Out of Stock
+    </button>
+  </div>
+</div>
