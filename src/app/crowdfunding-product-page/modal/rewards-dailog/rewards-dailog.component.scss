@@ -1,0 +1,162 @@
+@use "../../../../assets/sass/common.scss";
+
+$dark-gray: hsl(0, 0%, 48%);
+$moderate-cyan: hsl(176, 50%, 47%);
+$border-color: rgba(122, 122, 122, 0.3);
+$dark-cyan: hsl(176, 72%, 28%);
+
+.rewards-dailog-container {
+  font-family: "Commissioner", sans-serif;
+
+  h3 {
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+    margin: 0;
+    font-family: "Commissioner", sans-serif;
+  }
+
+  .description {
+    padding: 16px 0;
+    color: $dark-gray;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .card {
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .card-header {
+    align-items: center;
+    padding-top: 10px;
+
+    input[type="radio"] {
+      -ms-transform: scale(1.6); /* IE 9 */
+      -webkit-transform: scale(1.6); /* Chrome, Safari, Opera */
+      transform: scale(1.6);
+      margin-right: 16px;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: black;
+      font-size: 14px;
+      margin: 0;
+      font-family: "Commissioner", sans-serif;
+    }
+
+    .amount {
+      color: $moderate-cyan;
+      margin: 0;
+    }
+  }
+
+  .stock {
+    font-size: 22px;
+    font-weight: 900;
+    color: black;
+    padding-right: 10px;
+  }
+
+  .accept-user-input-section {
+    text-align: center;
+  }
+
+  hr {
+    border: 1px solid $border-color;
+    margin-bottom: 16px;
+  }
+
+  .input-wrapper {
+    width: 100px;
+    height: 36px;
+    border: 1px solid $border-color;
+    border-radius: 25px;
+  }
+
+  .input-box {
+    width: 50px;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+    font-family: "Commissioner", sans-serif;
+    border: none;
+    outline: none;
+  }
+
+  .card-body span {
+    color: $dark-gray;
+  }
+
+  .dollar-sign {
+    font-weight: 700;
+    color: $border-color;
+    font-size: 18px;
+    font-family: "Commissioner", sans-serif;
+    padding: 0 10px;
+  }
+
+  .btn-continue {
+    border-radius: 25px;
+    color: white;
+    padding: 14px 24px;
+    font-weight: 700;
+    margin-top: 12px;
+    background-color: $moderate-cyan;
+
+    &:hover {
+      background-color: $dark-cyan;
+    }
+  }
+}
+
+.cards-section .selectedCard {
+  border: 2px solid $moderate-cyan;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .card .card-title {
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+    font-size: 18px;
+
+    h1 {
+      padding-right: 16px;
+      font-size: 18px;
+
+      &:hover {
+        color: $moderate-cyan;
+      }
+    }
+  }
+
+  .card .card-header input[type="radio"] {
+    margin: 0 10px;
+  }
+
+  .card .card-body {
+    margin-left: 40px;
+  }
+
+  .accept-user-input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+  }
+
+  .btn-continue {
+    margin-left: 16px;
+  }
+}

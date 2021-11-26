@@ -8,7 +8,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { StatsComponent } from './stats/stats.component';
 import { AboutComponent } from './about/about.component';
 import { PledgeCardComponent } from './pledge-card/pledge-card.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { RewardsDailogComponent } from './modal/rewards-dailog/rewards-dailog.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { PledgeCardComponent } from './pledge-card/pledge-card.component';
     ProjectCardComponent,
     StatsComponent,
     AboutComponent,
-    PledgeCardComponent
+    PledgeCardComponent,
+    RewardsDailogComponent,
   ],
   imports: [
     CommonModule,
-    CrowdfundingProductPageRoutingModule
-  ]
+    CrowdfundingProductPageRoutingModule,
+    MatDialogModule,
+  ],
 })
-export class CrowdfundingProductPageModule { }
+export class CrowdfundingProductPageModule {}

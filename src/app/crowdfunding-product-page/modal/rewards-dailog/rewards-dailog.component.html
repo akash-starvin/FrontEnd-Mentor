@@ -1,0 +1,57 @@
+<div class="rewards-dailog-container">
+  <div class="d-flex space-between align-center">
+    <h3>Back this project</h3>
+    <img
+      src="../../../../assets/crowdfunding-product-page/icons/icon-close-modal.svg"
+      alt="close"
+      height="15px"
+      mat-dialog-close
+      class="cursor-pointer"
+    />
+  </div>
+  <p class="description">
+    Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the
+    world?
+  </p>
+
+  <div class="cards-section">
+    <div
+      *ngFor="let card of pledgeCardsData"
+      class="card cursor-pointer"
+      (click)="selectedReward(card.key)"
+      [ngClass]="{ selectedCard: card.key === selectedCard, disabled: card.stock === 0 && card.amount != 0  }"
+
+    >
+      <div class="d-flex card-header">
+        <input type="radio" [checked]="card.key === selectedCard" />
+        <div class="card-title">
+          <h1>{{ card.title }}</h1>
+          <p *ngIf="card.amount" class="amount">{{ card.amount }}</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="description">
+          {{ card.description }}
+        </p>
+        <div *ngIf="card.amount" class="d-flex vertical-align-center">
+          <h1 class="stock">{{ card.stock }}</h1>
+          <p>left</p>
+        </div>
+        <hr  *ngIf="card.key === selectedCard && card.amount">
+        <div
+          *ngIf="card.key === selectedCard && card.amount"
+          class="accept-user-input-section"
+        >
+          <span>Enter your pledge</span>
+          <div class="d-flex space-between align-item-baseline">
+            <div class="d-flex input-wrapper position-relative align-center">
+              <span class="dollar-sign">$</span>
+              <input class="input-box" type="number" />
+            </div>
+            <button class="btn-continue remove-btn-class cursor-pointer" [disabled]="card.stock === 0" (click)="contiue()">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
