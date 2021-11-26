@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { PledgeCardComponent } from './pledge-card/pledge-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RewardsDailogComponent } from './modal/rewards-dailog/rewards-dailog.component';
+import { ConfirmationDialogComponent } from './modal/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RewardsDailogComponent } from './modal/rewards-dailog/rewards-dailog.co
     AboutComponent,
     PledgeCardComponent,
     RewardsDailogComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     CommonModule,
