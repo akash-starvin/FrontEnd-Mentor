@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'social-media-dashboard',
+      displayName: 'Social Media Dashboard',
+      key: 'social-media-dashboard',
+    },
+    {
       routerLink: 'crowdfunding-product-page',
       displayName: 'Crowdfunding Product Page',
       key: 'crowdfunding-product-page',
