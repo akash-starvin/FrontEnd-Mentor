@@ -1,0 +1,37 @@
+<div
+  class="d-flex flex-column align-center cursor-pointer media-card"
+  [ngClass]="{
+    'dark-theme': theme,
+    'light-theme': !theme,
+    'border-facebook': data.handleName === 'Facebook',
+    'border-twitter': data.handleName === 'Twitter',
+    'border-instagram': data.handleName === 'Instagram',
+    'border-youtube': data.handleName === 'Youtube'
+  }"
+>
+  <div class="d-flex align-center card-header">
+    <img [src]="data.logo" alt="logo" />
+    <span class="user-name-text">{{ data.userName }}</span>
+  </div>
+  <div class="card-body">
+    <h1 class="followers-count">{{ data.followers }}</h1>
+    <h5 class="followers-label">FOLLOWERS</h5>
+  </div>
+  <div class="d-flex align-center card-footer">
+    <img
+      *ngIf="data.statsTrend === 'up'"
+      src="../../../../assets/social-media-dashboard/icons/icon-up.svg"
+      alt="up-arrow"
+    />
+    <img
+      *ngIf="data.statsTrend === 'down'"
+      src="../../../../assets/social-media-dashboard/icons/icon-down.svg"
+      alt="up-arrow"
+    />
+    <span
+      class="stats-count"
+      [ngClass]="data.statsTrend === 'up' ? 'text-green' : 'text-red'"
+      >{{ data.stats }} Today</span
+    >
+  </div>
+</div>

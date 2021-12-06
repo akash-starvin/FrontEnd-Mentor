@@ -1,33 +1,34 @@
-<div
-  class="social-media-home"
-  [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'"
->
-  <div class="media-home-header">
-    <div class="home-header">
-      <h1 class="title-text">Social Media Dashboard</h1>
-      <h5 class="secondary-text">Total Followers: 23,004</h5>
+<section [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'">
+  <div
+    class="social-media-home"
+  >
+    <div class="media-home-header">
+      <div class="home-header">
+        <h1 class="title-text">Social Media Dashboard</h1>
+        <h5 class="secondary-text">Total Followers: 23,004</h5>
+      </div>
+      <hr/>
+      <div class="theme-toggle">
+        <h5 class="secondary-text">Dark Mode</h5>
+        <label class="switch">
+          <input
+            type="checkbox"
+            [checked]="isDarkMode"
+            (change)="changeStatus()"
+          />
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
-    <hr />
-    <div class="theme-toggle">
-      <h5 class="secondary-text">Dark Mode</h5>
-      <label class="switch">
-        <input
-          type="checkbox"
-          [checked]="isDarkMode"
-          (change)="changeStatus()"
-        />
-        <span class="slider round"></span>
-      </label>
+    <div class="social-cards-wrapper">
+      <media-card
+        *ngFor="let card of socialMediaData"
+        [data]="card"
+        [theme]="isDarkMode"
+      >
+      </media-card>
     </div>
+    <h2 class="overview-text">Overview - Today</h2>
+    <div class="overview-cards-wrapper"></div>
   </div>
-  <div class="social-cards-wrapper">
-    <media-card
-      *ngFor="let card of socialMediaData"
-      [data]="card"
-      [theme]="isDarkMode"
-    >
-    </media-card>
-  </div>
-  <h2 class="overview-text">Overview - Today</h2>
-  <div class="overview-cards-wrapper"></div>
-</div>
+</section>

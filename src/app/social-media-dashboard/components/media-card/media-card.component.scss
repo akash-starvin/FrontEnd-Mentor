@@ -1,0 +1,121 @@
+@use "../../../../assets/sass/common.scss";
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: hsl(329, 70%, 58%);
+$youtube: hsl(348, 97%, 39%);
+
+$white: hsl(0, 0%, 100%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$light-grayish-blue: hsl(227, 47%, 96%);
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+$desaturated-blue: hsl(228, 34%, 66%);
+
+.media-card {
+  padding: 24px 0;
+  text-align: center;
+  border-radius: 8px;
+  border-top: 4px solid;
+}
+
+.card-header {
+  align-items: center;
+
+  .user-name-text {
+    font-size: 13px;
+    margin-left: 8px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+}
+
+.card-body {
+  padding: 34px 0 22px 0;
+
+  .followers-count {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+  }
+
+  .followers-label {
+    font-family: "Inter", sans-serif;
+    letter-spacing: 5px;
+    color: gray;
+    margin: 0;
+  }
+}
+
+.card-footer {
+  .stats-count {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-left: 4px;
+    font-size: 12px;
+  }
+
+  .stats-count.text-green {
+    color: $lime-green;
+  }
+
+  .stats-count.text-red {
+    color: $bright-red;
+  }
+}
+
+.border-facebook {
+  border-color: $facebook;
+}
+
+.border-twitter {
+  border-color: $twitter;
+}
+
+.border-instagram {
+  border-color: $instagram;
+}
+
+.border-youtube {
+  border-color: $youtube;
+}
+
+.dark-theme {
+  background-color: $dark-desaturated-blue;
+
+  &:hover{
+    background-color: hsl(229, 26%, 40%);
+  }
+
+  .user-name-text {
+    color: $desaturated-blue;
+  }
+
+  .followers-count {
+    color: $white;
+  }
+
+  .followers-label {
+    color: $very-pale-blue;
+    opacity: 0.9;
+  }
+}
+
+.light-theme {
+  background-color: $light-grayish-blue;
+
+  &:hover {
+    background-color: hsl(228, 27%, 79%);
+  }
+  .user-name-text {
+    color: gray;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .media-card {
+    width: 320px;
+  }
+}

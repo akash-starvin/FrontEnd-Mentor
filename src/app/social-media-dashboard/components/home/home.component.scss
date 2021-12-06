@@ -38,6 +38,13 @@ $desaturated-blue: hsl(228, 34%, 66%);
   }
 }
 
+.social-cards-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  row-gap: 20px;
+}
+
 .theme-toggle {
   display: flex;
   justify-content: space-between;
@@ -113,8 +120,7 @@ $desaturated-blue: hsl(228, 34%, 66%);
     color: $white;
   }
 
-  .secondary-text,
-  hr {
+  .secondary-text{
     color: $desaturated-blue;
   }
 
@@ -134,25 +140,30 @@ $desaturated-blue: hsl(228, 34%, 66%);
   .overview-text {
     color: $dark-grayish-blue;
   }
-
-  hr {
-    color: $dark-grayish-blue;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  .social-media-home {
-    padding: 0;
-    margin: auto;
+
+  section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .social-media-home {
+    margin: auto;
+    padding: 40px;
+    max-width: 1440px;
   }
 
   .media-home-header{
     display: flex;
     justify-content: space-between;
+  }
+
+  .title-text{
+    font-size: 32px;
   }
 
   .secondary-text{
@@ -165,5 +176,10 @@ $desaturated-blue: hsl(228, 34%, 66%);
 
   .social-cards-wrapper{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px 0;
   }
 }

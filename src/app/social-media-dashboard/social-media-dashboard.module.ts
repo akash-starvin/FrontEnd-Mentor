@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { SocialMediaDashboardRoutingModule } from './social-media-dashboard-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { MediaCardComponent } from './components/media-card/media-card.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    MediaCardComponent
   ],
   imports: [
     CommonModule,
