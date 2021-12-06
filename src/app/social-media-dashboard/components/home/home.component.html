@@ -1,13 +1,11 @@
 <section [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'">
-  <div
-    class="social-media-home"
-  >
+  <div class="social-media-home">
     <div class="media-home-header">
       <div class="home-header">
         <h1 class="title-text">Social Media Dashboard</h1>
         <h5 class="secondary-text">Total Followers: 23,004</h5>
       </div>
-      <hr/>
+      <hr />
       <div class="theme-toggle">
         <h5 class="secondary-text">Dark Mode</h5>
         <label class="switch">
@@ -29,6 +27,12 @@
       </media-card>
     </div>
     <h2 class="overview-text">Overview - Today</h2>
-    <div class="overview-cards-wrapper"></div>
+    <div class="overview-cards-wrapper">
+      <overview-card
+        *ngFor="let card of overviewCardData"
+        [data]="card"
+        [theme]="isDarkMode"
+      ></overview-card>
+    </div>
   </div>
 </section>

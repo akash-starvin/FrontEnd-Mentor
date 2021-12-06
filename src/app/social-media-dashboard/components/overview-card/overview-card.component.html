@@ -1,0 +1,26 @@
+<div class="overview-card" [ngClass]="theme ? 'dark-theme' : 'light-theme'">
+  <div class="d-flex space-between card-header">
+    <h5 class="title-text">{{ data.title }}</h5>
+    <img [src]="data.logo" alt="logo" />
+  </div>
+  <div class="d-flex space-between card-body">
+    <h1 class="count">{{ data.count }}</h1>
+    <div class="d-flex align-center stats-wrapper">
+      <img
+        *ngIf="data.statsTrend === 'up'"
+        src="../../../../assets/social-media-dashboard/icons/icon-up.svg"
+        alt="up-arrow"
+      />
+      <img
+        *ngIf="data.statsTrend === 'down'"
+        src="../../../../assets/social-media-dashboard/icons/icon-down.svg"
+        alt="up-arrow"
+      />
+      <span
+        class="trend-value"
+        [ngClass]="data.statsTrend === 'up' ? 'text-green' : 'text-red'"
+        >{{ data.stats }} %</span
+      >
+    </div>
+  </div>
+</div>

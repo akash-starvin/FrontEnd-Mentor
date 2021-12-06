@@ -1,0 +1,79 @@
+@use "../../../../assets/sass/common.scss";
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$white: hsl(0, 0%, 100%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$light-grayish-blue: hsl(227, 47%, 96%);
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+$desaturated-blue: hsl(228, 34%, 66%);
+
+.overview-card {
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.card-header {
+  .title-text {
+    color: gray;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.card-body {
+  margin-top: 30px;
+
+  .count{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .trend-value {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-left: 4px;
+    font-size: 12px;
+  }
+
+  .text-green {
+    color: $lime-green;
+  }
+
+  .text-red {
+    color: $bright-red;
+  }
+}
+
+.dark-theme{
+  background-color: $dark-desaturated-blue;
+
+  &:hover{
+    background-color: hsl(229, 26%, 40%);
+  }
+
+  .title-text{
+    color: $desaturated-blue;
+  }
+
+  .count{
+    color: $white;
+  }
+}
+
+.light-theme{
+  background-color: $light-grayish-blue;
+
+  &:hover {
+    background-color: hsl(228, 27%, 79%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .overview-card {
+    width: 260px;
+  }
+}
