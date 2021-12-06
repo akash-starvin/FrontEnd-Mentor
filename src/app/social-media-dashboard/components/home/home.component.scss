@@ -149,4 +149,21 @@ $desaturated-blue: hsl(228, 34%, 66%);
     justify-content: center;
     height: 100vh;
   }
+
+  .media-home-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .secondary-text{
+    padding-right: 12px;
+  }
+
+  hr{
+    display: none;
+  }
+
+  .social-cards-wrapper{
+    display: flex;
+  }
 }

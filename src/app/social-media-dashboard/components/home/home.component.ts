@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  darkMode: boolean = false;
+  isDarkMode: boolean = false;
 
   socialMediaData = [
     {
@@ -47,6 +47,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   changeStatus() {
-    this.darkMode = !this.darkMode;
+    this.isDarkMode = !this.isDarkMode;
   }
 }
