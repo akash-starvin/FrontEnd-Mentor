@@ -1,0 +1,57 @@
+@use "../../../../assets/sass/common.scss";
+@use "../../../../assets/todo-app/sass/variables.scss";
+
+section {
+  background-image: url(variables.$bg-mobile-light);
+  width: 100%;
+  height: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
+.logo-wrapper {
+  padding: 40px 20px;
+
+  .logo-text {
+    margin: 0;
+    font-family: variables.$font-family;
+    color: variables.$very-light-gray;
+    font-weight: 700;
+    letter-spacing: 10px;
+  }
+
+  img {
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.dark-theme{
+  background-image: url(variables.$bg-mobile-dark);
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    background-image: url(variables.$bg-desktop-light);
+  }
+
+  .container {
+    max-width: 750px;
+    margin: auto;
+    padding-top: 60px;
+  }
+
+  .logo-wrapper .logo-text {
+    font-size: 42px;
+    letter-spacing: 10px;
+  }
+
+  .logo-wrapper img {
+    height: 32px;
+  }
+
+  .dark-theme{
+    background-image: url(variables.$bg-desktop-dark);
+  }
+}

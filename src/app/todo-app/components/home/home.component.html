@@ -1,1 +1,19 @@
-<p>home works!</p>
+<section [ngClass]="isDarkMode ? 'dark-theme' : 'light-theme'">
+  <div class="container">
+    <div class="d-flex space-between logo-wrapper">
+      <h1 class="logo-text">TODO</h1>
+      <img
+        *ngIf="!isDarkMode"
+        src="../../../..//assets/todo-app/icons/icon-moon.svg"
+        alt="moon"
+        (click)="toggleDarkMode()"
+      />
+      <img
+        *ngIf="isDarkMode"
+        src="../../../..//assets/todo-app/icons/icon-sun.svg"
+        alt="sun"
+        (click)="toggleDarkMode()"
+      />
+    </div>
+  </div>
+</section>

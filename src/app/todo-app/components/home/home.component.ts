@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isDarkMode: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleDarkMode(){
+    this.isDarkMode = !this.isDarkMode;
+  }
 }
