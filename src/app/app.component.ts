@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'todo-app',
+      displayName: 'Todo App',
+      key: 'todo-app',
+    },
+    {
       routerLink: 'social-media-dashboard',
       displayName: 'Social Media Dashboard',
       key: 'social-media-dashboard',

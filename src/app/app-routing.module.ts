@@ -3,9 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'todo-app',
+    loadChildren: () => import('./todo-app/todo-app.module').then(m => m.TodoAppModule)
+  },
+  {
     path: 'social-media-dashboard',
     loadChildren: () => import('./social-media-dashboard/social-media-dashboard.module').then(m => m.SocialMediaDashboardModule)
-  },{
+  },
+  {
     path: 'time-tracking-dashboard',
     loadChildren: () => import('./time-tracking-dashboard/time-tracking-dashboard.module').then(m => m.TimeTrackingDashboardModule)
   },
