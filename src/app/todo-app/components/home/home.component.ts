@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   isDarkMode: boolean = false;
+  userInput: string = '';
 
   constructor() { }
 
@@ -16,5 +17,9 @@ export class HomeComponent implements OnInit {
 
   toggleDarkMode(){
     this.isDarkMode = !this.isDarkMode;
+  }
+
+  addToList(){
+    this.userInput = '';
   }
 }

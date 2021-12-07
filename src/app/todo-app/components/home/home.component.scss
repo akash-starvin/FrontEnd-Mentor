@@ -3,15 +3,15 @@
 
 section {
   background-image: url(variables.$bg-mobile-light);
-  width: 100%;
   height: -webkit-fill-available;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
+  padding: 20px;
 }
 
 .logo-wrapper {
-  padding: 40px 20px;
+  margin: 20px auto;
 
   .logo-text {
     margin: 0;
@@ -27,13 +27,50 @@ section {
   }
 }
 
-.dark-theme{
+.user-input-wrapper {
+  background-color: variables.$very-light-gray;
+  margin-bottom: 10px;
+  height: 45px;
+  border-radius: 4px;
+
+  .check-box {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid variables.$dark-grayish-blue;
+    margin: 0 20px;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    height: 30px;
+    width: -webkit-fill-available;
+    background-color: variables.$very-light-gray;
+    font-family: variables.$font-family;
+    font-weight: 400;
+    margin-right: 20px;
+  }
+}
+
+.dark-theme {
   background-image: url(variables.$bg-mobile-dark);
+  background-color: variables.$very-dark-blue;
+
+  .user-input-wrapper, input{
+    background-color: variables.$very-dark-grayish-blue-2;
+  }
+
+  .user-input-wrapper input{
+    color: variables.$dark-grayish-blue;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
   section {
     background-image: url(variables.$bg-desktop-light);
+    padding: 0;
   }
 
   .container {
@@ -51,7 +88,16 @@ section {
     height: 32px;
   }
 
-  .dark-theme{
+  .user-input-wrapper {
+    height: 65px;
+    margin: 40px auto;
+
+    input{
+      font-size: 20px;
+    }
+  }
+
+  .dark-theme {
     background-image: url(variables.$bg-desktop-dark);
   }
 }

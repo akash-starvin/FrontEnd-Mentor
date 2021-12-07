@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TodoAppRoutingModule } from './todo-app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     CommonModule,
-    TodoAppRoutingModule
+    TodoAppRoutingModule,
+    FormsModule
   ]
 })
 export class TodoAppModule { }

@@ -15,5 +15,14 @@
         (click)="toggleDarkMode()"
       />
     </div>
+    <div class="d-flex align-center user-input-wrapper">
+      <div class="check-box"></div>
+      <input
+        type="text"
+        placeholder="Create a todo..."
+        [(ngModel)]="userInput"
+        (keyup.enter)="addToList()"
+      />
+    </div>
   </div>
 </section>
