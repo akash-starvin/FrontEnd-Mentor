@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
-$font-family: 'Josefin Sans', sans-serif;
+$font-family: "Josefin Sans", sans-serif;
 
-$bg-mobile-light: '../../../../assets/todo-app/images/bg-mobile-light.jpg';
-$bg-mobile-dark: '../../../../assets/todo-app/images/bg-mobile-dark.jpg';
-$bg-desktop-light: '../../../../assets/todo-app/images/bg-desktop-light.jpg';
-$bg-desktop-dark: '../../../../assets/todo-app/images/bg-desktop-dark.jpg';
-
+$bg-mobile-light: "../../../../assets/todo-app/images/bg-mobile-light.jpg";
+$bg-mobile-dark: "../../../../assets/todo-app/images/bg-mobile-dark.jpg";
+$bg-desktop-light: "../../../../assets/todo-app/images/bg-desktop-light.jpg";
+$bg-desktop-dark: "../../../../assets/todo-app/images/bg-desktop-dark.jpg";
 
 // Primary colors
 $bright-blue: hsl(220, 98%, 61%);
-// $bheck-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$check-background: linear-gradient(
+  90deg,
+  rgba(87, 221, 255, 1) 0%,
+  rgba(192, 88, 243, 1) 100%
+);
 
 // Light Theme
 $very-light-gray: hsl(0, 0%, 98%);

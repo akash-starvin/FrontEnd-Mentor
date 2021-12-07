@@ -1,0 +1,30 @@
+<div
+  [ngClass]="{ 'dark-theme': theme }"
+  class="d-flex align-center cursor-pointer card-wrapper"
+>
+  <div
+    class="d-flex align-center justify-center check-box"
+    (click)="completed()"
+    [ngClass]="{ 'fill-circle': isComplete }"
+  >
+    <img
+      *ngIf="isComplete"
+      src="../../../../assets/todo-app/icons/icon-check.svg"
+      alt="check"
+      height="12"
+    />
+  </div>
+  <h5 class="card-text" [ngClass]="{ 'strike-out': isComplete }">Todo item</h5>
+  <img
+    *ngIf="!theme"
+    class="delete-icon"
+    src="../../../../assets/todo-app/icons/icon-cross.svg"
+    alt="close"
+  />
+  <img
+    *ngIf="theme"
+    class="delete-icon"
+    src="../../../../assets/todo-app/icons/icon-cross-dark.svg"
+    alt="close"
+  />
+</div>

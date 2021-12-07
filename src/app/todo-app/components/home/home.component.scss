@@ -8,6 +8,7 @@ section {
   background-size: contain;
   background-position: top center;
   padding: 20px;
+  background-color: variables.$very-light-grayish-blue;
 }
 
 .logo-wrapper {
@@ -28,14 +29,14 @@ section {
 }
 
 .user-input-wrapper {
-  background-color: variables.$very-light-gray;
+  background-color: white;
   margin-bottom: 10px;
   height: 45px;
   border-radius: 4px;
 
   .check-box {
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     border: 1px solid variables.$dark-grayish-blue;
     margin: 0 20px;
@@ -45,11 +46,11 @@ section {
     outline: none;
     border: none;
     height: 30px;
-    width: -webkit-fill-available;
-    background-color: variables.$very-light-gray;
+    width: 90%;
+    background-color: white;
     font-family: variables.$font-family;
     font-weight: 400;
-    margin-right: 20px;
+    padding: 0;
   }
 }
 
@@ -90,7 +91,7 @@ section {
 
   .user-input-wrapper {
     height: 65px;
-    margin: 40px auto;
+    margin: 40px auto 30px auto;
 
     input{
       font-size: 20px;

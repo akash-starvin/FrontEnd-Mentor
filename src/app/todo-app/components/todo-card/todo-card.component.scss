@@ -1,0 +1,64 @@
+@use "../../../../assets/sass/common.scss";
+@use "../../../../assets/todo-app/sass/variables.scss";
+
+.card-wrapper {
+  background-color: variables.$very-light-gray;
+  height: 45px;
+  border-bottom: 1px solid variables.$light-grayish-blue;
+
+  .check-box {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid variables.$dark-grayish-blue;
+    margin: 0 20px;
+  }
+
+  .card-text {
+    width: 83%;
+    background-color: variables.$very-light-gray;
+    font-family: variables.$font-family;
+    font-weight: 400;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .delete-icon {
+    display: none;
+  }
+
+  .fill-circle {
+    background: variables.$check-background;
+  }
+
+  .strike-out{
+    text-decoration: line-through;
+    opacity: .5;
+  }
+}
+
+.card-wrapper:hover .delete-icon {
+  display: block;
+  margin: 0 20px;
+  height: 14px;
+}
+
+.dark-theme {
+  background-color: variables.$very-dark-grayish-blue-2;
+  border-bottom: 1px solid variables.$dark-grayish-blue;
+
+  .card-text {
+    background-color: variables.$very-dark-grayish-blue-2;
+    color: variables.$light-grayish-blue;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card-wrapper {
+    height: 65px;
+
+    .card-text {
+      font-size: 18px;
+    }
+  }
+}
