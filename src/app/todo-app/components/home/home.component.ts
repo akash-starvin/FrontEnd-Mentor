@@ -9,6 +9,8 @@ import { Todo } from '../../interface/todo';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  LOCAL_STORAGE_KEY: string = 'TodoList';
+
   isDarkMode: boolean = false;
   userInput: string = '';
   selectedFilter: string = 'all';
@@ -138,14 +140,14 @@ export class HomeComponent implements OnInit {
   }
 
   saveToLocalStoarge() {
-    localStorage.setItem('TodoList', JSON.stringify(this.todoList));
+    localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(this.todoList));
   }
 
   getFromLocalStorage() {
-    if (localStorage.getItem('TodoList') === '[]') {
+    if (localStorage.getItem(this.LOCAL_STORAGE_KEY) === '[]' || localStorage.getItem(this.LOCAL_STORAGE_KEY) === null) {
       this.todoList = this.dummyTodoList;
     } else {
-      this.todoList = JSON.parse(localStorage.getItem('TodoList') || '{}');
+      this.todoList = JSON.parse(localStorage.getItem(this.LOCAL_STORAGE_KEY) || '{}');
     }
   }
 }
