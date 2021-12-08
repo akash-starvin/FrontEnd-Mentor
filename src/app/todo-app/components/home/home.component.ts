@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   isDarkMode: boolean = false;
   userInput: string = '';
   selectedFilter: string = 'all';
+  displayTodoList: any = [];
 
   todoList = [
     {
@@ -51,9 +52,12 @@ export class HomeComponent implements OnInit {
       displayName: 'Completed',
     },
   ];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getFilteredArray(this.selectedFilter);
+  }
 
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
@@ -67,11 +71,31 @@ export class HomeComponent implements OnInit {
       });
       this.userInput = '';
     }
+    this.getFilteredArray(this.selectedFilter);
   }
 
   applyFilter(key: string) {
     if (key != this.selectedFilter) {
       this.selectedFilter = key;
+      this.getFilteredArray(key);
+    }
+  }
+
+  getFilteredArray(key: string) {
+    this.displayTodoList = [];
+    switch (key) {
+      case 'active':
+        this.displayTodoList.push(
+          ...this.todoList.filter((item) => item.active)
+        );
+        break;
+      case 'completed':
+        this.displayTodoList.push(
+          ...this.todoList.filter((item) => !item.active)
+        );
+        break;
+      default:
+        this.displayTodoList.push(...this.todoList);
     }
   }
 
@@ -80,14 +104,19 @@ export class HomeComponent implements OnInit {
   }
 
   deleteTask($event: number) {
-    this.todoList.splice($event, 1);
+    this.todoList = this.todoList.filter(
+      (item) => item !== this.displayTodoList[$event]
+    );
+    this.getFilteredArray(this.selectedFilter);
   }
 
   markTaskCompleted($event: number) {
-    this.todoList[$event].active = !this.todoList[$event].active;
+    this.displayTodoList[$event].active = !this.displayTodoList[$event].active;
+    this.getFilteredArray(this.selectedFilter);
   }
 
   clearCompletedTask() {
     this.todoList = this.todoList.filter((item) => item.active);
+    this.getFilteredArray(this.selectedFilter);
   }
 }

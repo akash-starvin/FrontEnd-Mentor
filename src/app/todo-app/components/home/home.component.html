@@ -27,7 +27,7 @@
     <div class="todo-list-section">
       <div class="todo-list-wrapper">
         <todo-card
-          *ngFor="let card of todoList; let i = index"
+          *ngFor="let card of displayTodoList; let i = index"
           [data]="card"
           [position]="i"
           [theme]="isDarkMode"
