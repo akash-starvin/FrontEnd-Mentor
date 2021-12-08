@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   isDarkMode: boolean = false;
   userInput: string = '';
 
@@ -35,18 +34,21 @@ export class HomeComponent implements OnInit {
       active: true,
       task: 'Complete todo app'
     }
-  ]
+  ];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  toggleDarkMode(){
+  toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
   }
 
-  addToList(){
+  addToList() {
+    this.todoList.unshift({
+      active: true,
+      task: this.userInput,
+    });
     this.userInput = '';
   }
 }
