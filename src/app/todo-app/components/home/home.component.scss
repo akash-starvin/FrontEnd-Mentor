@@ -3,7 +3,7 @@
 
 section {
   background-image: url(variables.$bg-mobile-light);
-  height: -webkit-fill-available;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
