@@ -1,4 +1,4 @@
-<section [ngClass]="{'dark-theme': isDarkMode}">
+<section [ngClass]="{ 'dark-theme': isDarkMode }">
   <div class="container">
     <div class="d-flex space-between logo-wrapper">
       <h1 class="logo-text">TODO</h1>
@@ -24,6 +24,15 @@
         (keyup.enter)="addToList()"
       />
     </div>
-    <todo-card [theme]="isDarkMode"></todo-card>
+    <div>
+      <div class="todo-list-wrapper">
+        <todo-card
+          *ngFor="let card of todoList"
+          [data]="card"
+          [theme]="isDarkMode"
+        ></todo-card>
+      </div>
+      <div class="filter-wrapper"></div>
+    </div>
   </div>
 </section>

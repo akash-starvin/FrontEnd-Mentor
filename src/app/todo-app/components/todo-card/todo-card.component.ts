@@ -7,15 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoCardComponent implements OnInit {
   @Input() theme: any;
-
-  isComplete: boolean = false;
+  @Input() data: any;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   completed() {
-    console.log('Comp');
-    this.isComplete = !this.isComplete;
+    this.data.active = !this.data.active;
   }
 }

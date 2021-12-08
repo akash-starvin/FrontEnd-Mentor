@@ -5,16 +5,18 @@
   <div
     class="d-flex align-center justify-center check-box"
     (click)="completed()"
-    [ngClass]="{ 'fill-circle': isComplete }"
+    [ngClass]="{ 'fill-circle': !data.active }"
   >
     <img
-      *ngIf="isComplete"
+      *ngIf="!data.active"
       src="../../../../assets/todo-app/icons/icon-check.svg"
       alt="check"
       height="12"
     />
   </div>
-  <h5 class="card-text" [ngClass]="{ 'strike-out': isComplete }">Todo item</h5>
+  <h5 class="card-text" [ngClass]="{ 'strike-out': !data.active }">
+    {{ data.task }}
+  </h5>
   <img
     *ngIf="!theme"
     class="delete-icon"
