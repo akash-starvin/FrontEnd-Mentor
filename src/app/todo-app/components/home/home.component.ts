@@ -1,5 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
+import { Filter } from '../../interface/filter';
+import { Todo } from '../../interface/todo';
 
 @Component({
   selector: 'home',
@@ -10,9 +12,10 @@ export class HomeComponent implements OnInit {
   isDarkMode: boolean = false;
   userInput: string = '';
   selectedFilter: string = 'all';
-  displayTodoList: any = [];
+  displayTodoList: Todo[] = [];
+  todoList: Todo[] = [];
 
-  todoList = [
+  dummyTodoList = [
     {
       active: false,
       task: 'Complete online JavaScript course',
@@ -39,7 +42,7 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  filterArray = [
+  filterArray: Filter[] = [
     {
       key: 'all',
       displayName: 'All',
@@ -57,6 +60,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.getFromLocalStorage();
     this.getFilteredArray(this.selectedFilter);
   }
 
@@ -72,6 +76,7 @@ export class HomeComponent implements OnInit {
       });
       this.userInput = '';
     }
+    this.saveToLocalStoarge();
     this.getFilteredArray(this.selectedFilter);
   }
 
@@ -108,21 +113,39 @@ export class HomeComponent implements OnInit {
     this.todoList = this.todoList.filter(
       (item) => item !== this.displayTodoList[$event]
     );
+    this.saveToLocalStoarge();
     this.getFilteredArray(this.selectedFilter);
   }
 
   markTaskCompleted($event: number) {
     this.displayTodoList[$event].active = !this.displayTodoList[$event].active;
+    this.saveToLocalStoarge();
     this.getFilteredArray(this.selectedFilter);
   }
 
   clearCompletedTask() {
     this.todoList = this.todoList.filter((item) => item.active);
+    this.saveToLocalStoarge();
     this.getFilteredArray(this.selectedFilter);
   }
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.displayTodoList, event.previousIndex, event.currentIndex);
+    moveItemInArray(
+      this.displayTodoList,
+      event.previousIndex,
+      event.currentIndex
+    );
   }
 
+  saveToLocalStoarge() {
+    localStorage.setItem('TodoList', JSON.stringify(this.todoList));
+  }
+
+  getFromLocalStorage() {
+    if (localStorage.getItem('TodoList') === '[]') {
+      this.todoList = this.dummyTodoList;
+    } else {
+      this.todoList = JSON.parse(localStorage.getItem('TodoList') || '{}');
+    }
+  }
 }
