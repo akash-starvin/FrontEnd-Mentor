@@ -24,7 +24,7 @@
         (keyup.enter)="addToList()"
       />
     </div>
-    <div>
+    <div class="todo-list-section">
       <div class="todo-list-wrapper">
         <todo-card
           *ngFor="let card of todoList"
@@ -32,7 +32,32 @@
           [theme]="isDarkMode"
         ></todo-card>
       </div>
-      <div class="filter-wrapper"></div>
+      <div class="d-flex space-between align-center filter-wrapper">
+        <span>{{ getRemainingTaskCount() }} items left</span>
+        <div class="d-flex filter-desktop">
+          <span
+            *ngFor="let item of filterArray"
+            class="cursor-pointer filter-item"
+            [ngClass]="{ 'selected-filter': selectedFilter === item.key }"
+            (click)="applyFilter(item.key)"
+            >{{ item.displayName }}</span
+          >
+        </div>
+        <button class="remove-btn-class cursor-pointer clear-btn">
+          Clear completed
+        </button>
+      </div>
+      <div class="d-flex space-arround filters-mobile">
+        <div class="d-flex align-center filters-mobile-wrapper">
+          <span
+            *ngFor="let item of filterArray"
+            class="cursor-pointer filter-item"
+            [ngClass]="{ 'selected-filter': selectedFilter === item.key }"
+            (click)="applyFilter(item.key)"
+            >{{ item.displayName }}</span
+          >
+        </div>
+      </div>
     </div>
   </div>
 </section>
