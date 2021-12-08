@@ -124,6 +124,11 @@ section {
   }
 }
 
+.drag-drop-text{
+  color: variables.$dark-grayish-blue;
+  font-family: variables.$font-family;
+}
+
 @media only screen and (min-width: 768px) {
   section {
     background-image: url(variables.$bg-desktop-light);

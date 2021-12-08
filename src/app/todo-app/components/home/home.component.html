@@ -25,7 +25,11 @@
       />
     </div>
     <div class="todo-list-section">
-      <div class="todo-list-wrapper">
+      <div
+        class="todo-list-wrapper"
+        cdkDropList
+        (cdkDropListDropped)="drop($event)"
+      >
         <todo-card
           *ngFor="let card of displayTodoList; let i = index"
           [data]="card"
@@ -33,6 +37,7 @@
           [theme]="isDarkMode"
           (deletePosition)="deleteTask($event)"
           (completedPosition)="markTaskCompleted($event)"
+          cdkDrag
         ></todo-card>
       </div>
       <div class="d-flex space-between align-center filter-wrapper">
@@ -64,6 +69,9 @@
           >
         </div>
       </div>
+    </div>
+    <div class="d-flex space-arround">
+      <span class="drag-drop-text">Drag and drop to reorder list</span>
     </div>
   </div>
 </section>

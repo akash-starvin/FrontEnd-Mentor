@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -119,4 +120,9 @@ export class HomeComponent implements OnInit {
     this.todoList = this.todoList.filter((item) => item.active);
     this.getFilteredArray(this.selectedFilter);
   }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.displayTodoList, event.previousIndex, event.currentIndex);
+  }
+
 }
