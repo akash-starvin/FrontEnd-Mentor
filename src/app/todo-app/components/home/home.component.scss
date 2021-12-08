@@ -32,7 +32,7 @@ section {
   background-color: white;
   margin-bottom: 10px;
   height: 45px;
-  border-radius: 4px;
+  border-radius: 8px;
 
   .check-box {
     height: 20px;
@@ -54,18 +54,73 @@ section {
   }
 }
 
+.todo-list-section {
+  border-radius: 8px;
+  overflow: hidden;
+
+  .filters-mobile {
+    margin: 20px 0;
+    background-color: white;
+    height: 45px;
+
+    .filters-mobile-wrapper {
+      padding: 0 20px;
+      font-family: variables.$font-family;
+      color: variables.$dark-grayish-blue;
+      font-size: 14px;
+    }
+
+    .filters-mobile-wrapper .filter-item {
+      margin: 0 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}
+
+.filter-wrapper {
+  height: 65px;
+  background-color: white;
+  padding: 0 20px;
+  font-family: variables.$font-family;
+  color: variables.$dark-grayish-blue;
+  font-size: 14px;
+
+  .filter-item {
+    margin: 0 8px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .clear-btn {
+    background-color: transparent;
+    font-family: variables.$font-family;
+    color: variables.$dark-grayish-blue;
+    font-size: 15px;
+  }
+
+  .filter-desktop {
+    display: none;
+  }
+}
+
+.selected-filter {
+  color: variables.$bright-blue;
+}
+
 .dark-theme {
   background-image: url(variables.$bg-mobile-dark);
   background-color: variables.$very-dark-blue;
 
-  .user-input-wrapper, input{
-    background-color: variables.$very-dark-grayish-blue-2;
+  .user-input-wrapper,
+  input,
+  .filter-wrapper {
+    background-color: variables.$very-dark-desaturated-blue;
   }
 
-  .user-input-wrapper input{
+  .user-input-wrapper input {
     color: variables.$dark-grayish-blue;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -93,12 +148,20 @@ section {
     height: 65px;
     margin: 40px auto 30px auto;
 
-    input{
+    input {
       font-size: 20px;
     }
   }
 
   .dark-theme {
     background-image: url(variables.$bg-desktop-dark);
+  }
+
+  .filters-mobile {
+    visibility: hidden;
+  }
+
+  .filter-desktop {
+    display: block !important;
   }
 }
