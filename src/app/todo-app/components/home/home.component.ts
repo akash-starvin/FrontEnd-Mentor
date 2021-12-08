@@ -60,11 +60,13 @@ export class HomeComponent implements OnInit {
   }
 
   addToList() {
-    this.todoList.unshift({
-      active: true,
-      task: this.userInput,
-    });
-    this.userInput = '';
+    if (this.userInput) {
+      this.todoList.unshift({
+        active: true,
+        task: this.userInput,
+      });
+      this.userInput = '';
+    }
   }
 
   applyFilter(key: string) {
@@ -75,5 +77,17 @@ export class HomeComponent implements OnInit {
 
   getRemainingTaskCount() {
     return this.todoList.filter((item) => item.active).length;
+  }
+
+  deleteTask($event: number) {
+    this.todoList.splice($event, 1);
+  }
+
+  markTaskCompleted($event: number) {
+    this.todoList[$event].active = !this.todoList[$event].active;
+  }
+
+  clearCompletedTask() {
+    this.todoList = this.todoList.filter((item) => item.active);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'todo-card',
@@ -8,12 +8,20 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TodoCardComponent implements OnInit {
   @Input() theme: any;
   @Input() data: any;
+  @Input() position: any;
+
+  @Output() deletePosition = new EventEmitter<number>();
+  @Output() completedPosition = new EventEmitter<number>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  completed() {
-    this.data.active = !this.data.active;
+  markTaskCompleted() {
+    this.completedPosition.emit(this.position);
+  }
+
+  deleteTask() {
+    this.deletePosition.emit(this.position);
   }
 }

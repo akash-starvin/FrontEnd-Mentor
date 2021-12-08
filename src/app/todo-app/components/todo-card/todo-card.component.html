@@ -4,7 +4,7 @@
 >
   <div
     class="d-flex align-center justify-center check-box"
-    (click)="completed()"
+    (click)="markTaskCompleted()"
     [ngClass]="{ 'fill-circle': !data.active }"
   >
     <img
@@ -22,11 +22,13 @@
     class="delete-icon"
     src="../../../../assets/todo-app/icons/icon-cross.svg"
     alt="close"
+    (click)="deleteTask()"
   />
   <img
     *ngIf="theme"
     class="delete-icon"
     src="../../../../assets/todo-app/icons/icon-cross-dark.svg"
     alt="close"
+    (click)="deleteTask()"
   />
 </div>

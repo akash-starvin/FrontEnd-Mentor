@@ -27,9 +27,12 @@
     <div class="todo-list-section">
       <div class="todo-list-wrapper">
         <todo-card
-          *ngFor="let card of todoList"
+          *ngFor="let card of todoList; let i = index"
           [data]="card"
+          [position]="i"
           [theme]="isDarkMode"
+          (deletePosition)="deleteTask($event)"
+          (completedPosition)="markTaskCompleted($event)"
         ></todo-card>
       </div>
       <div class="d-flex space-between align-center filter-wrapper">
@@ -43,7 +46,10 @@
             >{{ item.displayName }}</span
           >
         </div>
-        <button class="remove-btn-class cursor-pointer clear-btn">
+        <button
+          class="remove-btn-class cursor-pointer clear-btn"
+          (click)="clearCompletedTask()"
+        >
           Clear completed
         </button>
       </div>
