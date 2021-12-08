@@ -2,7 +2,7 @@
 @use "../../../../assets/todo-app/sass/variables.scss";
 
 .card-wrapper {
-  background-color: variables.$very-light-gray;
+  background-color: white;
   height: 45px;
   border-bottom: 1px solid variables.$light-grayish-blue;
 
@@ -16,7 +16,7 @@
 
   .card-text {
     width: 83%;
-    background-color: variables.$very-light-gray;
+    background-color: white;
     font-family: variables.$font-family;
     font-weight: 400;
     margin: 0;
@@ -44,11 +44,11 @@
 }
 
 .dark-theme {
-  background-color: variables.$very-dark-grayish-blue-2;
-  border-bottom: 1px solid variables.$dark-grayish-blue;
+  background-color: variables.$very-dark-desaturated-blue;
+  border-bottom: 1px solid variables.$very-dark-grayish-blue-2;
 
   .card-text {
-    background-color: variables.$very-dark-grayish-blue-2;
+    background-color: variables.$very-dark-desaturated-blue;
     color: variables.$light-grayish-blue;
   }
 }
