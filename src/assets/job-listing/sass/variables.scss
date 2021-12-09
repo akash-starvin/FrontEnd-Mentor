@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+$font-family: 'Spartan', sans-serif;
+
+// Primary color
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+// Neutral color
+$light-grayish-cyan: hsl(180, 52%, 96%); //Background
+$light-grayish-cyan: hsl(180, 31%, 95%); //Filter Tablets
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+$background-mobile: "../../../../assets/job-listing/images/bg-header-mobile.svg";
+$background-desktop: "../../../../assets/job-listing/images/bg-header-desktop.svg";
