@@ -6,5 +6,7 @@
       Clear
     </button>
   </div>
-  <div class="job-list-wrapper"></div>
+  <div class="job-list-wrapper">
+    <job-card *ngFor="let card of jsonResponse"></job-card>
+  </div>
 </div>

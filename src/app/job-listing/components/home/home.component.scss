@@ -18,10 +18,14 @@
   height: 264px;
 }
 
-.search-wrapper {
+.search-wrapper,
+.job-list-wrapper {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
+}
+
+.search-wrapper {
   margin: -40px 20px 0;
   padding: 24px 40px;
 
@@ -37,13 +41,26 @@
   }
 }
 
+.job-list-wrapper {
+  margin: 20px;
+}
+
 @media only screen and (min-width: 945px) {
   .header {
     background-image: url(variables.$background-desktop);
   }
 
-  .search-wrapper {
-    width: 78%;
-    margin: -40px auto 0;
+  .search-wrapper,
+  .job-list-wrapper {
+    width: 80%;
   }
+
+  .search-wrapper {
+    margin: -40px auto 30px;
+  }
+
+  .job-list-wrapper {
+    margin: 20px auto;
+  }
+
 }
