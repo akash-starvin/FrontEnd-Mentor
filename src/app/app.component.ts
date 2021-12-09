@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'job-listing',
+      displayName: 'Job Listing Filters',
+      key: 'job-listing',
+    },
+    {
       routerLink: 'todo-app',
       displayName: 'Todo App',
       key: 'todo-app',
@@ -40,7 +45,7 @@ export class AppComponent {
       key: 'tip-calculator',
     },
   ];
-  selectedNav: string = 'time-tracking-dashboard';
+  selectedNav: string = 'todo-app';
 
   constructor() {}
 

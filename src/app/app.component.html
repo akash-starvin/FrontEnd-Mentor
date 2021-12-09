@@ -1,16 +1,23 @@
 <mat-drawer-container class="container">
   <mat-drawer #drawer [mode]="mode.value"
     ><ul class="remove-list-bullets">
-      <li class="nav-item" *ngFor="let item of navItems" [routerLinkActive]="['nav-item-selected']">
-        <a [routerLink]="item.routerLink" (click)="setNav(item.key)">{{
-          item.displayName
-        }}</a>
+      <li
+        class="nav-item"
+        *ngFor="let item of navItems"
+        [routerLinkActive]="['nav-item-selected']"
+      >
+        <a
+          [routerLink]="item.routerLink"
+          (click)="setNav(item.key)"
+          (click)="drawer.toggle()"
+          >{{ item.displayName }}</a
+        >
       </li>
     </ul></mat-drawer
   >
   <mat-drawer-content>
     <button class="menu-button" mat-raised-button (click)="drawer.toggle()">
-      <img src="/assets/icons/icon-side-menu.svg" alt="" />
+      <img src="/assets/icons/icon-side-menu.svg" alt="menu" />
     </button>
     <router-outlet></router-outlet>
   </mat-drawer-content>

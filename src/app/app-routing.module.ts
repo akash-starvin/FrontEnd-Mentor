@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'job-listing',
+    loadChildren: () => import('./job-listing/job-listing.module').then(m => m.JobListingModule)
+  },
+  {
     path: 'todo-app',
     loadChildren: () => import('./todo-app/todo-app.module').then(m => m.TodoAppModule)
   },
