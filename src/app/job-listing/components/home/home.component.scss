@@ -1,0 +1,49 @@
+@use "./../../../../assets/sass/common.scss";
+@use "./../../../../assets/job-listing/sass/variables.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: variables.$font-family;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: variables.$light-grayish-cyan;
+}
+
+.header {
+  background-image: url(variables.$background-mobile);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 264px;
+}
+
+.search-wrapper {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
+  margin: -40px 20px 0;
+  padding: 24px 40px;
+
+  .btn-clear {
+    font-weight: 700;
+    color: variables.$desaturated-dark-cyan;
+    font-size: 18px;
+    height: 20px;
+
+    &:hover {
+      border-bottom: 2px solid variables.$desaturated-dark-cyan;
+    }
+  }
+}
+
+@media only screen and (min-width: 945px) {
+  .header {
+    background-image: url(variables.$background-desktop);
+  }
+
+  .search-wrapper {
+    width: 78%;
+    margin: -40px auto 0;
+  }
+}
