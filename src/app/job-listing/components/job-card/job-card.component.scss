@@ -1,0 +1,120 @@
+@use "./../../../../assets/sass/common.scss";
+@use "./../../../../assets/job-listing/sass/variables.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: variables.$font-family;
+}
+
+h3,
+h5 {
+  margin: 0;
+  font-family: variables.$font-family;
+}
+
+.card {
+  background-color: white;
+  margin: 40px auto;
+  padding: 0 20px 20px;
+  font-family: variables.$font-family;
+  border-left: 6px solid variables.$desaturated-dark-cyan;
+  border-radius: 8px 0 0 8px;
+}
+
+.image-wrapper {
+  height: 40px;
+  transform: translateY(-50%);
+}
+
+.company-name-text {
+  font-weight: 700;
+  color: variables.$desaturated-dark-cyan;
+  font-size: 15px;
+  margin-right: 12px;
+}
+
+.new-tag,
+.featured-tag {
+  color: white;
+  border-radius: 14px;
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.new-tag {
+  background-color: variables.$desaturated-dark-cyan;
+  margin-right: 8px;
+}
+
+.featured-tag {
+  background-color: black;
+}
+
+.designation-text {
+  margin: 4px 0;
+  font-weight: 700;
+
+  &:hover {
+    color: variables.$desaturated-dark-cyan;
+  }
+}
+
+.content-footer {
+  margin-bottom: 8px;
+  ul {
+    margin: 0;
+  }
+  li {
+    margin-right: 26px;
+  }
+
+  .sub-text {
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+.card-tags-wrapper {
+  border-top: 1px solid gray;
+  padding-top: 14px;
+  flex-wrap: wrap;
+
+  .tags {
+    color: variables.$desaturated-dark-cyan;
+    background-color: variables.$light-grayish-cyan;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 2px;
+    margin: 0 16px 18px 0;
+    height: fit-content;
+
+    &:hover {
+      background-color: variables.$desaturated-dark-cyan;
+      color: variables.$light-grayish-cyan;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    padding: 20px;
+  }
+
+  .image-wrapper {
+    height: 80px;
+    transform: none;
+    margin: 9px 26px 9px 30px;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card-tags-wrapper {
+    border-top: none;
+  }
+}

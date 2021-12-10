@@ -1,1 +1,23 @@
-<p>job-card works!</p>
+<div class="card">
+  <img class="image-wrapper" [src]="data.imageUrl" alt="logo" />
+  <div class="card-content">
+    <div>
+      <div class="d-flex align-center">
+        <h5 class="company-name-text">{{ data.companyName }}</h5>
+        <div class="new-tag">NEW!</div>
+        <div class="featured-tag">FEATURED</div>
+      </div>
+      <h3 class="cursor-pointer designation-text">{{ data.designation }}</h3>
+      <div class="d-flex align-center content-footer">
+        <span class="sub-text">{{ data.postedDate }}</span>
+        <ul class="d-flex">
+          <li class="sub-text">{{ data.jobType }}</li>
+          <li class="sub-text">{{ data.location }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex card-tags-wrapper">
+      <span *ngFor="let tag of data.tags" class="cursor-pointer tags">{{ tag }}</span>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,7 @@
     "postedDate": 1,
     "jobType": "Full Time",
     "location": "USA only",
-    "imageUrl": "src/assets/job-listing/images/photosnap.svg",
+    "imageUrl": "../../../../assets/job-listing/images/photosnap.svg",
     "isFeatured": true,
     "tags": ["Frontend", "Senior", "HTML", "CSS", "JavaScript"]
   },
@@ -17,7 +17,7 @@
     "postedDate": 1,
     "jobType": "Part Time",
     "location": "Remote",
-    "imageUrl": "src/assets/job-listing/images/manage.svg",
+    "imageUrl": "../../../../assets/job-listing/images/manage.svg",
     "isFeatured": true,
     "tags": ["Fullstack", "Midweight", "Python", "React"]
   },
@@ -28,7 +28,7 @@
     "postedDate": 2,
     "jobType": "Part Time",
     "location": "USA only",
-    "imageUrl": "src/assets/job-listing/images/account.svg",
+    "imageUrl": "../../../../assets/job-listing/images/account.svg",
     "isFeatured": false,
     "tags": ["Frontend","Junior","React","Sass","JavaScript"]
   },
@@ -39,7 +39,7 @@
     "postedDate": 5,
     "jobType": "Contract",
     "location": "USA only",
-    "imageUrl": "src/assets/job-listing/images.myhome.svg",
+    "imageUrl": "../../../../assets/job-listing/images/myhome.svg",
     "isFeatured": false,
     "tags": ["Frontend","Junior","CSS","JavaScript"]
   },
@@ -50,7 +50,7 @@
     "postedDate": 7,
     "jobType": "Full Time",
     "location": "Worldwide",
-    "imageUrl": "src/assets/job-listing/images/loop-studios.svg",
+    "imageUrl": "../../../../assets/job-listing/images/loop-studios.svg",
     "isFeatured": false,
     "tags": ["Fullstack","Midweight","JavaScript","Sass","Ruby"]
   },
@@ -61,7 +61,7 @@
     "postedDate": 14,
     "jobType": "Full Time",
     "location": "UK only",
-    "imageUrl": "src/assets/job-listing/images/faceit.svg",
+    "imageUrl": "../../../../assets/job-listing/images/faceit.svg",
     "isFeatured": false,
     "tags": ["Backend","Junior","Ruby","RoR"]
   },
@@ -71,8 +71,8 @@
     "designation": "Junior Developer",
     "postedDate": 14,
     "jobType": "Full Time",
-    "location": "",
-    "imageUrl": "src/assets/job-listing/images/shortly.svg",
+    "location": "Worldwide",
+    "imageUrl": "../../../../assets/job-listing/images/shortly.svg",
     "isFeatured": false,
     "tags": ["Frontend","Junior","HTML","Sass","JavaScript"]
   },
@@ -83,7 +83,7 @@
     "postedDate": 16,
     "jobType": "Full Time",
     "location": "USA only",
-    "imageUrl": "src/assets/job-listing/images/insure.svg",
+    "imageUrl": "../../../../assets/job-listing/images/insure.svg",
     "isFeatured": false,
     "tags": ["Frontend","Junior","Vue","JavaScript","Sass"]
   },
@@ -94,7 +94,7 @@
     "postedDate": 21,
     "jobType": "Full Time",
     "location": "Worldwide",
-    "imageUrl": "src/assets/job-listing/images/eyecam-co.svg",
+    "imageUrl": "../../../../assets/job-listing/images/eyecam-co.svg",
     "isFeatured": false,
     "tags": ["Fullstack", "Midweight", "JavaScript", "Django", "Python"]
   },
@@ -105,7 +105,7 @@
     "postedDate": 35,
     "jobType": "Part Time",
     "location": "Worldwide",
-    "imageUrl": "src/assets/job-listing/images/the-air-filter-companany.svg",
+    "imageUrl": "../../../../assets/job-listing/images/the-air-filter-company.svg",
     "isFeatured": false,
     "tags": ["Frontend", "Junior", "React", "Sass", "JavaScript"]
   }

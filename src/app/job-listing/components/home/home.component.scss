@@ -9,6 +9,7 @@
 .container {
   min-height: 100vh;
   background-color: variables.$light-grayish-cyan;
+  padding-bottom: 1px;
 }
 
 .header {
@@ -20,12 +21,12 @@
 
 .search-wrapper,
 .job-list-wrapper {
-  background-color: white;
   border-radius: 4px;
-  box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
 }
 
 .search-wrapper {
+  background-color: white;
+  box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
   margin: -40px 20px 0;
   padding: 24px 40px;
 
@@ -62,5 +63,4 @@
   .job-list-wrapper {
     margin: 20px auto;
   }
-
 }

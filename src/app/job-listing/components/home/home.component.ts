@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiService } from '../../services/fetch-api.service';
-import { Job } from '../interface/job';
+import { Job } from '../../interface/job';
 
 @Component({
   selector: 'home',
