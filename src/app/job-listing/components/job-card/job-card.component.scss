@@ -65,17 +65,18 @@ h5 {
 }
 
 .content-footer {
-  margin-bottom: 8px;
-  ul {
-    margin: 0;
-  }
-  li {
-    margin-right: 26px;
-  }
+
 
   .sub-text {
     font-size: 12px;
     color: gray;
+  }
+
+  strong{
+    top: -3px;
+    left: -5px;
+    position: relative;
+    margin: 0 8px;
   }
 }
 
@@ -123,5 +124,9 @@ h5 {
   .card-tags-wrapper {
     border-top: none;
     margin-left: 40px;
+  }
+
+  .content-footer{
+    width: auto;
   }
 }

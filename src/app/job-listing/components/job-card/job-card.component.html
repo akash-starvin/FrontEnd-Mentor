@@ -8,12 +8,12 @@
         <div *ngIf="data.isFeatured" class="featured-tag">FEATURED</div>
       </div>
       <h3 class="cursor-pointer designation-text">{{ data.designation }}</h3>
-      <div class="d-flex align-center content-footer">
+      <div class="d-flex align-center space-between content-footer">
         <span class="sub-text">{{ data.postedDate | days }}</span>
-        <ul class="d-flex">
-          <li class="sub-text">{{ data.jobType }}</li>
-          <li class="sub-text">{{ data.location }}</li>
-        </ul>
+        <strong>.</strong>
+        <span class="sub-text">{{ data.jobType }}</span>
+        <strong>.</strong>
+        <span class="sub-text">{{ data.location }}</span>
       </div>
     </div>
     <div class="d-flex card-tags-wrapper">
