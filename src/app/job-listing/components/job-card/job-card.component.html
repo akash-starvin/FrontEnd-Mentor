@@ -9,7 +9,7 @@
       </div>
       <h3 class="cursor-pointer designation-text">{{ data.designation }}</h3>
       <div class="d-flex align-center content-footer">
-        <span class="sub-text">{{ data.postedDate }}</span>
+        <span class="sub-text">{{ data.postedDate | days }}</span>
         <ul class="d-flex">
           <li class="sub-text">{{ data.jobType }}</li>
           <li class="sub-text">{{ data.location }}</li>
