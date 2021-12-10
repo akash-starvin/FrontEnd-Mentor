@@ -25,6 +25,7 @@
 }
 
 .search-wrapper {
+  justify-content: space-between;
   background-color: white;
   box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
   margin: -40px 20px 0;
@@ -38,6 +39,27 @@
 
     &:hover {
       border-bottom: 2px solid variables.$desaturated-dark-cyan;
+    }
+  }
+}
+
+.chip-wrapper {
+  color: variables.$desaturated-dark-cyan;
+  background-color: variables.$light-grayish-cyan;
+  font-weight: 700;
+  border-radius: 2px;
+  padding-left: 8px;
+  margin-right: 12px;
+  height: fit-content;
+  justify-content: start;
+
+  .close-btn {
+    background: variables.$desaturated-dark-cyan;
+    padding: 8px;
+    margin-left: 8px;
+
+    &:hover {
+      background-color: black;
     }
   }
 }

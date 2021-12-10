@@ -1,12 +1,26 @@
 <div class="container">
   <div class="header"></div>
-  <div class="d-flex space-between search-wrapper">
-    <div class="filter-chips-wrapper"></div>
+  <div class="d-flex align-center search-wrapper">
+    <div class="d-flex">
+      <div class="align-center chip-wrapper" *ngFor="let tag of filterTags">
+        {{ tag }}
+        <button class="remove-btn-class close-btn" (click)="removeFilter(tag)">
+          <img
+            src="../../../../assets//job-listing/icons/icon-remove.svg"
+            alt="close"
+          />
+        </button>
+      </div>
+    </div>
     <button class="remove-btn-class btn-clear" (click)="clearAll()">
       Clear
     </button>
   </div>
   <div class="job-list-wrapper">
-    <job-card *ngFor="let card of jsonResponse" [data]="card"></job-card>
+    <job-card
+      *ngFor="let card of jsonResponse"
+      [data]="card"
+      (selectedTag)="addToTagsList($event)"
+    ></job-card>
   </div>
 </div>

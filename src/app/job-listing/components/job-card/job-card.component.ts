@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'job-card',
@@ -8,9 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class JobCardComponent implements OnInit {
 
   @Input() data: any;
+  @Output() selectedTag = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {}
 
+  addTagToList(tag: string){
+    this.selectedTag.emit(tag);
+  }
 }
