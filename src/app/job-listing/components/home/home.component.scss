@@ -16,7 +16,8 @@
   background-image: url(variables.$background-mobile);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 264px;
+  height: 180px;
+  background-color: variables.$desaturated-dark-cyan;
 }
 
 .search-wrapper,
@@ -28,13 +29,14 @@
   justify-content: space-between;
   background-color: white;
   box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
-  margin: -40px 20px 0;
-  padding: 24px 40px;
+  margin: 0 20px;
+  padding: 20px;
+  transform: translateY(-50%);
 
   .btn-clear {
     font-weight: 700;
     color: variables.$desaturated-dark-cyan;
-    font-size: 18px;
+    font-size: 15px;
     height: 20px;
 
     &:hover {
@@ -47,16 +49,17 @@
   color: variables.$desaturated-dark-cyan;
   background-color: variables.$light-grayish-cyan;
   font-weight: 700;
-  border-radius: 2px;
+  border-radius: 5px;
   padding-left: 8px;
-  margin-right: 12px;
+  margin: 0 12px 12px 0;
   height: fit-content;
   justify-content: start;
 
-  .close-btn {
+  .btn-close {
     background: variables.$desaturated-dark-cyan;
     padding: 8px;
     margin-left: 8px;
+    border-radius: 0 5px 5px 0;
 
     &:hover {
       background-color: black;
@@ -68,9 +71,14 @@
   margin: 20px;
 }
 
+.hide-search-box {
+  visibility: hidden;
+}
+
 @media only screen and (min-width: 945px) {
   .header {
     background-image: url(variables.$background-desktop);
+    height: 150px;
   }
 
   .search-wrapper,
@@ -79,10 +87,15 @@
   }
 
   .search-wrapper {
-    margin: -40px auto 30px;
+    margin: 0 auto;
+    padding: 30px;
   }
 
   .job-list-wrapper {
-    margin: 20px auto;
+    margin: 0 auto 20px;
+  }
+
+  .chip-wrapper{
+    margin-bottom: 0;
   }
 }

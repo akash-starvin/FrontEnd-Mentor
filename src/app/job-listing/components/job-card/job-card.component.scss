@@ -14,11 +14,15 @@ h5 {
 
 .card {
   background-color: white;
-  margin: 40px auto;
+  margin: 0 auto 40px;
   padding: 0 20px 20px;
   font-family: variables.$font-family;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px -12px variables.$desaturated-dark-cyan-shadow;
+}
+
+.card-border{
   border-left: 6px solid variables.$desaturated-dark-cyan;
-  border-radius: 8px 0 0 8px;
 }
 
 .image-wrapper {
@@ -39,6 +43,7 @@ h5 {
   border-radius: 14px;
   padding: 4px 8px;
   font-size: 10px;
+  font-weight: 700;
 }
 
 .new-tag {
@@ -84,7 +89,7 @@ h5 {
     background-color: variables.$light-grayish-cyan;
     font-weight: 700;
     padding: 8px 12px;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 0 16px 18px 0;
     height: fit-content;
 
@@ -98,13 +103,14 @@ h5 {
 @media only screen and (min-width: 768px) {
   .card {
     display: flex;
-    padding: 20px;
+    padding: 35px;
+    margin: 0 auto 20px;
   }
 
   .image-wrapper {
     height: 80px;
     transform: none;
-    margin: 9px 26px 9px 30px;
+    margin-right: 26px;
   }
 
   .card-content {
