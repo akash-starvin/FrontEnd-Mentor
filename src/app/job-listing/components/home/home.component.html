@@ -21,7 +21,7 @@
   </div>
   <div class="job-list-wrapper">
     <job-card
-      *ngFor="let card of jsonResponse"
+      *ngFor="let card of displayCardsArray"
       [data]="card"
       (selectedTag)="addToTagsList($event)"
     ></job-card>

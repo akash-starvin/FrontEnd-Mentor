@@ -10,6 +10,7 @@ import { Job } from '../../interface/job';
 export class HomeComponent implements OnInit {
   URL: string = './../../../assets/job-listing/mock-data/job-list.json';
   jsonResponse: Job[] = [];
+  displayCardsArray: Job[] = [];
   filterTags: string[] = [];
 
   constructor(private fetchApi: FetchApiService) {
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   getMockData(url: string) {
     this.fetchApi.getJSON(url).subscribe((data) => {
       this.jsonResponse = data;
+      this.displayCardsArray = data;
     });
   }
 
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
     if (!this.checkTagExists(tag)) {
       this.filterTags.push(tag);
     }
+    this.checkMainArray();
   }
 
   checkTagExists(tag: string) {
@@ -36,9 +39,33 @@ export class HomeComponent implements OnInit {
 
   removeFilter(tag: string) {
     this.filterTags = this.filterTags.filter((obj) => obj !== tag);
+    this.checkMainArray();
   }
 
   clearAll() {
     this.filterTags = [];
+    this.displayCardsArray = this.jsonResponse;
+  }
+
+  checkMainArray() {
+    this.displayCardsArray = [];
+    for (let i = 0; i < this.jsonResponse.length; i++) {
+      let count = 0;
+      for (let j = 0; j < this.filterTags.length; j++) {
+        let flag = false;
+        for (let k = 0; k < this.jsonResponse[i].tags.length; k++) {
+          if (this.filterTags[j] === this.jsonResponse[i].tags[k]) {
+            flag = true;
+            break;
+          }
+        }
+        if (flag) {
+          count++;
+        }
+      }
+      if (count == this.filterTags.length) {
+        this.displayCardsArray.push(this.jsonResponse[i]);
+      }
+    }
   }
 }
