@@ -1,1 +1,20 @@
-<p>tracker-home works!</p>
+<div class="container">
+  <div class="d-flex flex-column align-center header">
+    <h1 class="title-text">IP Address Tracker</h1>
+    <div class="d-flex input-wrapper">
+      <input
+        class="remove-input-class"
+        type="text"
+        placeholder="Search for any IP address or domain"
+        [(ngModel)]="userInput"
+        (keyup.enter)="findIPAddress()"
+      />
+      <button class="remove-btn-class btn-search" (click)="findIPAddress()">
+        <img
+          src="../../../../assets/ip-address-tracker/icons/icon-arrow.svg"
+          alt="arrow"
+        />
+      </button>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { IpAddressTrackerRoutingModule } from './ip-address-tracker-routing.module';
 import { TrackerHomeComponent } from './component/tracker-home/tracker-home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TrackerHomeComponent } from './component/tracker-home/tracker-home.comp
   ],
   imports: [
     CommonModule,
-    IpAddressTrackerRoutingModule
+    IpAddressTrackerRoutingModule,
+    FormsModule
   ]
 })
 export class IpAddressTrackerModule { }

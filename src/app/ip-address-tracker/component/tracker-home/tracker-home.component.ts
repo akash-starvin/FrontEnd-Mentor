@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackerHomeComponent implements OnInit {
 
+  userInput: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  findIPAddress(){}
 }

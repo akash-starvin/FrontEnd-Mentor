@@ -1,0 +1,65 @@
+@use "../../../../assets/sass/common.scss";
+@use "../../../../assets/ip-address-tracker/sass/variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.header {
+  background-image: url(../../../../assets/ip-address-tracker/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  padding: 40px 20px 0 20px;
+
+  .title-text {
+    font-weight: 500;
+    font-family: variables.$font-family;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.header .input-wrapper {
+  background-color: white;
+  border-radius: 12px;
+  height: 55px;
+  width: 90vw;
+  margin: 10px auto;
+  overflow: hidden;
+
+  input {
+    width: -webkit-fill-available;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  .btn-search {
+    background-color: variables.$very-dark-gray;
+    width: 55px;
+    height: inherit;
+
+    &:hover {
+      background-color: variables.$very-dark-gray-hover;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 30vh;
+    padding: 50px 20px 0 20px;
+
+    .title-text {
+      font-size: 32px;
+    }
+
+    .input-wrapper {
+      width: 50vw;
+    }
+  }
+}
