@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'ip-address-tracker',
+    loadChildren: () => import('./ip-address-tracker/ip-address-tracker.module').then(m => m.IpAddressTrackerModule)
+  },
+  {
     path: 'job-listing',
     loadChildren: () => import('./job-listing/job-listing.module').then(m => m.JobListingModule)
   },

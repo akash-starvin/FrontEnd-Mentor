@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'ip-address-tracker',
+      displayName: 'IP Address Tracker',
+      key: 'ip-address-tracker',
+    },
+    {
       routerLink: 'job-listing',
       displayName: 'Job Listing Filters',
       key: 'job-listing',
