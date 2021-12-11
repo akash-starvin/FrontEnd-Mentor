@@ -6,10 +6,10 @@
         class="remove-input-class"
         type="text"
         placeholder="Search for any IP address or domain"
-        [(ngModel)]="userInput"
-        (keyup.enter)="findIPAddress()"
+        [(ngModel)]="userInputIP"
+        (keyup.enter)="searchIPAddress()"
       />
-      <button class="remove-btn-class btn-search" (click)="findIPAddress()">
+      <button class="remove-btn-class btn-search" (click)="searchIPAddress()">
         <img
           src="../../../../assets/ip-address-tracker/icons/icon-arrow.svg"
           alt="arrow"
@@ -17,4 +17,5 @@
       </button>
     </div>
   </div>
+  <div class="map-container" id="map-container"></div>
 </div>
