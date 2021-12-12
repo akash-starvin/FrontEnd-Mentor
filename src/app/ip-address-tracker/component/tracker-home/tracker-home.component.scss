@@ -13,8 +13,8 @@
   background-image: url(../../../../assets/ip-address-tracker/images/pattern-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40vh;
-  padding: 40px 20px 0 20px;
+  height: 50vh;
+  padding: 20px 20px 0 20px;
 
   .title-text {
     font-weight: 500;
@@ -49,6 +49,40 @@
   }
 }
 
+.card {
+  width: -webkit-fill-available;
+  padding: 20px;
+  text-align: center;
+  margin: 0 20px;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 1000;
+
+  .text-wrapper {
+    padding: 8px 0;
+  }
+
+  .card-title {
+    font-size: 10px;
+    color: gray;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .card-value {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  h1,
+  h6 {
+    margin: 0;
+    font-family: variables.$font-family;
+  }
+}
+
 .map-container {
   height: 70vh;
 }
@@ -64,6 +98,35 @@
 
     .input-wrapper {
       width: 50vw;
+    }
+  }
+
+  .card {
+    display: flex;
+    padding: 30px 0;
+    margin: 0 20px;
+    width: 80vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    .text-wrapper {
+      padding: 8px 0;
+      width: 20vw;
+      padding: 0 10px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-value {
+      font-size: 24px;
+    }
+
+    .border-right{
+      border-right: 1px solid lightgray;
     }
   }
 }
