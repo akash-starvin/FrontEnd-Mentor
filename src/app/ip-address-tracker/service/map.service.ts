@@ -11,11 +11,15 @@ export class MapService {
   });
 
   TILE_LAYER = L.tileLayer(
-    'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+    'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
     {
-      maxZoom: 20,
+      maxZoom: 18,
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
     }
   );
 
@@ -23,7 +27,7 @@ export class MapService {
 
   initMap(lat: number, lng: number, viewID: string) {
     var map;
-    map = L.map(viewID).setView([lat, lng], 15);
+    map = L.map(viewID).setView([lat, lng], 13);
     this.TILE_LAYER.addTo(map);
     L.marker([lat, lng], {
       icon: this.MARK_ICON,
