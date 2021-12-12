@@ -97,23 +97,24 @@
     }
 
     .input-wrapper {
-      width: 50vw;
+      width: 40vw;
     }
   }
 
   .card {
     display: flex;
-    padding: 30px 0;
+    padding: 45px 0;
     margin: 0 20px;
-    width: 80vw;
+    width: 90vw;
     left: 0;
     right: 0;
     margin: 0 auto;
 
     .text-wrapper {
       padding: 8px 0;
-      width: 20vw;
-      padding: 0 10px;
+      width: 25%;
+      padding: 0 30px;
+      text-align: left;
     }
 
     .card-title {
@@ -125,8 +126,20 @@
       font-size: 24px;
     }
 
-    .border-right{
+    .border-right {
       border-right: 1px solid lightgray;
     }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    .input-wrapper {
+      width: 40vw;
+    }
+  }
+
+  .card {
+    width: 70vw;
   }
 }
