@@ -22,7 +22,7 @@ export class MapService {
   constructor() {}
 
   initMap(lat: number, lng: number, viewID: string) {
-    let map;
+    var map;
     map = L.map(viewID).setView([lat, lng], 15);
     this.TILE_LAYER.addTo(map);
     L.marker([lat, lng], {

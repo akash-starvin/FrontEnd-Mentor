@@ -4,7 +4,7 @@ import { MapService } from '../../service/map.service';
 @Component({
   selector: 'app-tracker-home',
   templateUrl: './tracker-home.component.html',
-  styleUrls: ['./tracker-home.component.scss']
+  styleUrls: ['./tracker-home.component.scss'],
 })
 export class TrackerHomeComponent implements OnInit, AfterViewInit {
   KEY: string = 'at_sy9223SRvnRqB06xiV3uU9Zmlb3po';
@@ -25,17 +25,23 @@ export class TrackerHomeComponent implements OnInit, AfterViewInit {
     )
       .then((result) => result.json())
       .then((data) => {
-        console.log(data); // remove log
-        this.resetMap();
-        this.map = this.mapServicce.initMap(
-          data.location.lat,
-          data.location.lng,
-          'map-container'
-        );
+        if (data.code === 422) {
+          alert("Enter a valid IP Address");
+        } else {
+          this.resetMap();
+          this.map = this.mapServicce.initMap(
+            data.location.lat,
+            data.location.lng,
+            'map-container'
+          );
+        }
+      })
+      .catch((error) => {
+        console.error('There was an error!', error);
       });
   }
 
-  resetMap(){
+  resetMap() {
     if (this.map !== undefined && this.map !== null) {
       this.map.remove();
     }
