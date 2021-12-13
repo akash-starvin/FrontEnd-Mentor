@@ -10,6 +10,11 @@ export class AppComponent {
   mode = new FormControl('over');
   navItems = [
     {
+      routerLink: 'e-commerce-product-page',
+      displayName: 'E-commerce Product Page',
+      key: 'e-commerce-product-page',
+    },
+    {
       routerLink: 'ip-address-tracker',
       displayName: 'IP Address Tracker',
       key: 'ip-address-tracker',
