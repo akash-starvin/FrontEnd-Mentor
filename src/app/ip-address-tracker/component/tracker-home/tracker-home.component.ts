@@ -32,7 +32,7 @@ export class TrackerHomeComponent implements OnInit, AfterViewInit {
         this.setMap(data);
       })
       .catch((error) => {
-        console.error('There was an error!', error);
+        alert('There was an error! ' + error);
       });
   }
 
@@ -61,7 +61,6 @@ export class TrackerHomeComponent implements OnInit, AfterViewInit {
     this.isp = data.isp;
     this.timeZone = 'UTC ' + data.location.timezone;
     this.ipAddress = data.ip;
-    console.log(this.location, this.isp, this.timeZone);
   }
 
   getLoacation(location: any): string {
