@@ -1,0 +1,14 @@
+@use "../../../../assets/sass/common.scss";
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 75vw;
+  }
+}

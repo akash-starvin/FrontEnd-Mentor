@@ -33,8 +33,6 @@
 
 @media only screen and (min-width: 768px) {
   .header-container {
-    width: 90vw;
-    margin: 0 auto;
     padding: 0;
     border-bottom: 1px solid variables.$grayish-blue;
   }
@@ -78,10 +76,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .header-container {
-    width: 75vw;
-  }
-
   .menu-wrapper .btn-menu-item {
     margin: 0 16px;
   }
