@@ -1,6 +1,10 @@
 @use "../../../../assets/sass/common.scss";
 @use "../../../../assets/e-commerce-product-page/sass/variables.scss";
 
+*{
+  box-sizing: border-box;
+}
+
 .header-container {
   padding: 20px;
 }
@@ -16,6 +20,11 @@
 .img-profile {
   height: 25px;
   margin-left: 20px;
+
+  &:hover{
+    border-radius: 50%;
+    border: 3px solid variables.$orange;
+  }
 }
 
 .menu-wrapper {
