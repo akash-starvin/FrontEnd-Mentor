@@ -1,0 +1,37 @@
+<div class="d-flex space-between align-center header-container">
+  <div class="d-flex align-item-baseline">
+    <button class="remove-btn-class btn-menu">
+      <img
+        src="../../../../assets/e-commerce-product-page/icons/icon-menu.svg"
+        alt="menu"
+      />
+    </button>
+    <img
+      src="../../../../assets/e-commerce-product-page/icons/logo.svg"
+      alt="logo"
+      class="logo"
+    />
+    <div class="menu-wrapper">
+      <button
+        *ngFor="let item of menuItems"
+        class="remove-btn-class btn-menu-item"
+      >
+        {{ item }}
+      </button>
+    </div>
+  </div>
+  <div class="d-flex align-center">
+    <button class="remove-btn-class">
+      <img
+        src="../../../../assets/e-commerce-product-page/icons/icon-cart.svg"
+        alt="cart"
+        class="img-cart"
+      />
+    </button>
+    <img
+      src="../../../../assets/e-commerce-product-page/images/avatar.png"
+      alt="profile"
+      class="img-profile"
+    />
+  </div>
+</div>

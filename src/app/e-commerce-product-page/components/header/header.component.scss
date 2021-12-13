@@ -1,0 +1,79 @@
+@use "../../../../assets/sass/common.scss";
+@use "../../../../assets/e-commerce-product-page/sass/variables.scss";
+
+.header-container {
+  padding: 20px;
+}
+
+.btn-menu {
+  padding-right: 14px;
+}
+
+.logo {
+  height: fit-content;
+}
+
+.img-profile {
+  height: 25px;
+  margin-left: 20px;
+}
+
+.menu-wrapper {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid variables.$grayish-blue;
+  }
+
+  .btn-menu {
+    display: none;
+    padding: 0;
+  }
+
+  .logo {
+    margin-right: 30px;
+  }
+
+  .menu-wrapper {
+    display: block;
+
+    .btn-menu-item {
+      margin: 0 10px;
+      padding: 40px 0;
+      text-transform: capitalize;
+      font-family: variables.$font-family;
+      font-size: 16px;
+      color: variables.$dark-grayish-blue;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        color: variables.$very-vark-blue;
+        border-bottom: 4px solid variables.$orange;
+      }
+    }
+  }
+
+  .img-cart {
+    height: 24px;
+  }
+
+  .img-profile {
+    height: 60px;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-container {
+    width: 75vw;
+  }
+
+  .menu-wrapper .btn-menu-item {
+    margin: 0 16px;
+  }
+}
