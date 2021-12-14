@@ -1,11 +1,9 @@
 <section>
   <div class="container">
     <header></header>
-    <div class="d-flex">
-      <product-image
-        *ngIf="responseJson"
-        [images]="responseJson.images"
-      ></product-image>
+    <div *ngIf="responseJson" class="d-flex container-body">
+      <product-image [images]="responseJson.images"></product-image>
+      <product-details [details]="responseJson"></product-details>
     </div>
   </div>
 </section>

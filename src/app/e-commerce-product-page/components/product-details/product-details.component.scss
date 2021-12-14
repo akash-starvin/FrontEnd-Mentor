@@ -1,0 +1,147 @@
+@use "../../../../assets/sass/common.scss";
+@use "../../../../assets/e-commerce-product-page/sass/variables.scss";
+
+*,
+h1,
+h5 {
+  font-family: variables.$font-family;
+}
+
+h1,
+h5,
+p {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+
+  .brand-name {
+    font-size: 14px;
+    color: variables.$orange;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .product-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  .description {
+    font-size: 15px;
+    color: variables.$dark-grayish-blue;
+  }
+}
+
+.price-wrapper {
+  padding: 24px 0;
+  justify-content: space-between;
+
+  .actual-price,
+  .discount {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .price {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .discount {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: variables.$orange;
+    background-color: variables.$pale-orange;
+    margin: 0 auto 0 20px;
+  }
+
+  .actual-price {
+    color: variables.$grayish-blue;
+    text-decoration: line-through;
+  }
+}
+
+.product-count-wrapper,
+.add-to-cart-wrapper {
+  height: 56px;
+  border-radius: 10px;
+  width: calc(100wv - 20px);
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.product-count-wrapper {
+  background-color: variables.$light-grayish-blue;
+  padding: 0 20px;
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.add-to-cart-wrapper {
+  background-color: variables.$orange;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: variables.$pale-orange 0px 20px 20px;
+
+  span {
+    color: white;
+    margin-left: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .container {
+    padding: 0;
+    max-width: 455px;
+
+    .brand-name {
+      font-size: 16px;
+    }
+
+    .product-name {
+      font-size: 45px;
+      line-height: 50px;
+      margin: 20px 0 34px;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+  }
+
+  .price-wrapper {
+    flex-direction: column;
+    align-items: start;
+    padding: 32px 0 40px;
+
+    .actual-price {
+      margin-top: 12px;
+    }
+  }
+
+  .flex-row-desktop {
+    flex-direction: row;
+  }
+
+  .product-count-wrapper {
+    width: 40%;
+    margin-right: 20px;
+  }
+
+  .add-to-cart-wrapper {
+    margin-top: 0;
+  }
+}

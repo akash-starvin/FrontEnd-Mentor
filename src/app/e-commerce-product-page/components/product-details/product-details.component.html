@@ -1,0 +1,50 @@
+<section>
+  <div class="container">
+    <h5 class="brand-name">{{ details.brand }}</h5>
+    <h1 class="product-name">{{ details.name }}</h1>
+    <p class="description">{{ details.description }}</p>
+    <div class="d-flex align-center price-wrapper">
+      <div class="d-flex">
+        <h1 class="price">{{ actualPrice }}</h1>
+        <span class="discount">{{ details.discount }}%</span>
+      </div>
+      <span class="actual-price">{{ details.price }}</span>
+    </div>
+    <div class="d-flex flex-column flex-row-desktop">
+      <div class="d-flex space-between align-center product-count-wrapper">
+        <button class="remove-btn-class">
+          <img
+            src="../../../../assets/e-commerce-product-page/icons/icon-minus.svg"
+            alt="subtract"
+            height="4"
+            width="12"
+          />
+        </button>
+        <span>0</span>
+        <button class="remove-btn-class">
+          <img
+            src="../../../../assets/e-commerce-product-page/icons/icon-plus.svg"
+            alt="add"
+            height="12"
+            width="12"
+          />
+        </button>
+      </div>
+      <button
+        class="
+          d-flex
+          align-center
+          justify-center
+          remove-btn-class
+          add-to-cart-wrapper
+        "
+      >
+        <img
+          src="../../../../assets/e-commerce-product-page/icons/icon-cart-white.svg"
+          alt="cart"
+        />
+        <span>Add to cart</span>
+      </button>
+    </div>
+  </div>
+</section>

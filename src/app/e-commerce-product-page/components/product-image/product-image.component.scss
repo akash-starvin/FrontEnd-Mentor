@@ -6,7 +6,6 @@
 }
 
 .image-wrapper {
-  // height: 40vh;
   position: relative;
 
   .img-product {
@@ -39,9 +38,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .product-image-container {
-    padding: 100px 50px;
-  }
 
   .img-product,
   .img-thumbnail {
@@ -49,8 +45,8 @@
     overflow: hidden;
   }
 
-  .image-wrapper .img-product {
-    height: 420px;
+  .image-wrapper {
+    max-width: 445px;
   }
 
   .thumbnail-wrapper {

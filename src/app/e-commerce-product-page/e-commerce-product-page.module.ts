@@ -5,13 +5,15 @@ import { ECommerceProductPageRoutingModule } from './e-commerce-product-page-rou
 import { ProductHomeComponent } from './components/product-home/product-home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductImageComponent } from './components/product-image/product-image.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
     ProductHomeComponent,
     HeaderComponent,
-    ProductImageComponent
+    ProductImageComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,

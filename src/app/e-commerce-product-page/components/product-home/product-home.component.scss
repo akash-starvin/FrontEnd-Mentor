@@ -5,15 +5,31 @@ section {
   min-height: 100vh;
 }
 
+.container-body{
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     width: 90vw;
     margin: 0 auto;
   }
+
+  .container-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 20px;
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   .container {
-    width: 75vw;
+    width: 70vw;
+  }
+
+  .container-body{
+    padding: 90px;
   }
 }
