@@ -1,0 +1,58 @@
+<section>
+  <div class="d-flex w-100 flex-end">
+    <button class="remove-btn-class btn-close" mat-dialog-close>
+      <img
+        src="../../../../assets/e-commerce-product-page/icons/icon-close.svg"
+        alt="close"
+        width="25"
+        height="25"
+      />
+    </button>
+  </div>
+  <div class="product-image-container">
+    <div class="image-wrapper">
+      <img class="img-product" [src]="displayImage" alt="product-image" />
+      <div class="d-flex space-between arrow-wrapper">
+        <button
+          class="center remove-btn-class"
+          (click)="updateIndex(-1)"
+          [ngClass]="{ 'disable-arrow': currentIndex === 0 }"
+        >
+          <img
+            src="../../../../assets/e-commerce-product-page/icons/icon-previous.svg"
+            alt="arrow-previous"
+          />
+        </button>
+        <button
+          class="center remove-btn-class"
+          (click)="updateIndex(1)"
+          [ngClass]="{
+            'disable-arrow': currentIndex === this.images.length - 1
+          }"
+        >
+          <img
+            src="../../../../assets/e-commerce-product-page/icons/icon-next.svg"
+            alt="arrow-next"
+          />
+        </button>
+      </div>
+    </div>
+    <div class="space-between thumbnail-wrapper">
+      <button
+        *ngFor="let item of images; let i = index"
+        class="remove-btn-class p-0"
+        (click)="updateThumbnail(i)"
+      >
+        <img
+          [src]="item.thumbnailUrl"
+          alt="thumbnail"
+          class="img-thumbnail"
+          height="80"
+          [ngClass]="{
+            'selected-thumbnail': currentIndex === i
+          }"
+        />
+      </button>
+    </div>
+  </div>
+</section>

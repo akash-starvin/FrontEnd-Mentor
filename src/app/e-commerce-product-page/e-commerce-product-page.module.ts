@@ -6,6 +6,8 @@ import { ProductHomeComponent } from './components/product-home/product-home.com
 import { HeaderComponent } from './components/header/header.component';
 import { ProductImageComponent } from './components/product-image/product-image.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductHomeComponent,
     HeaderComponent,
     ProductImageComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    GalleryModalComponent
   ],
   imports: [
     CommonModule,
-    ECommerceProductPageRoutingModule
+    ECommerceProductPageRoutingModule,
+    MatDialogModule
   ]
 })
 export class ECommerceProductPageModule { }

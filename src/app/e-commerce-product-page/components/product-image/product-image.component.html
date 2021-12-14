@@ -1,6 +1,6 @@
 <div class="product-image-container">
   <div class="image-wrapper">
-    <img class="img-product" [src]="displayImage" alt="product-image" />
+    <img class="img-product" [src]="displayImage" alt="product-image" (click)="openDialog()" />
     <div class="d-flex space-between arrow-wrapper">
       <button
         class="center remove-btn-class"

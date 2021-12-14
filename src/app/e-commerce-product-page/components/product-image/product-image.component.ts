@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { GalleryModalComponent } from '../gallery-modal/gallery-modal.component';
 
 @Component({
   selector: 'product-image',
@@ -10,7 +12,7 @@ export class ProductImageComponent implements OnInit {
   currentIndex: number = 0;
   displayImage: string = '';
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.showImage(this.currentIndex);
@@ -32,5 +34,11 @@ export class ProductImageComponent implements OnInit {
 
   showImage(index: number){
     this.displayImage = this.images[index].imageUrl;
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(GalleryModalComponent, {
+      data: { images: this.images, currentIndex: this.currentIndex },
+    });
   }
 }

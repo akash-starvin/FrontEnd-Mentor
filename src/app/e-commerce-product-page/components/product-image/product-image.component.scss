@@ -1,7 +1,7 @@
 @use "../../../../assets/sass/common.scss";
 @use "../../../../assets/e-commerce-product-page/sass/variables.scss";
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -37,8 +37,8 @@
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
 
+@media only screen and (min-width: 768px) {
   .img-product,
   .img-thumbnail {
     border-radius: 10px;
@@ -59,12 +59,17 @@
     display: none;
   }
 
-  .img-thumbnail:hover{
-    opacity: .5;
+  .img-thumbnail:hover {
+    opacity: 0.5;
   }
 
-  .selected-thumbnail{
+  .selected-thumbnail {
     border: 4px solid variables.$orange;
-    opacity: .5;
+    opacity: 0.5;
   }
+}
+
+::ng-deep.mat-dialog-container {
+  box-shadow: none !important;
+  background: transparent !important;
 }
