@@ -55,7 +55,7 @@ export class AppComponent {
       key: 'tip-calculator',
     },
   ];
-  selectedNav: string = 'todo-app';
+  selectedNav: string = 'e-commerce-product-page';
 
   constructor() {}
 

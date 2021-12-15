@@ -1,20 +1,18 @@
 <mat-drawer-container class="container">
-  <mat-drawer #drawer [mode]="mode.value"
-    ><ul class="remove-list-bullets">
-      <li
-        class="nav-item"
+  <mat-drawer #drawer [mode]="mode.value">
+    <div class="d-flex flex-column nav-wrapper">
+      <button
         *ngFor="let item of navItems"
         [routerLinkActive]="['nav-item-selected']"
+        class="remove-btn-class nav-item"
+        [routerLink]="item.routerLink"
+        (click)="setNav(item.key)"
+        (click)="drawer.toggle()"
       >
-        <a
-          [routerLink]="item.routerLink"
-          (click)="setNav(item.key)"
-          (click)="drawer.toggle()"
-          >{{ item.displayName }}</a
-        >
-      </li>
-    </ul></mat-drawer
-  >
+        {{ item.displayName }}
+      </button>
+    </div>
+  </mat-drawer>
   <mat-drawer-content>
     <button class="menu-button" mat-raised-button (click)="drawer.toggle()">
       <img src="/assets/icons/icon-side-menu.svg" alt="menu" />
