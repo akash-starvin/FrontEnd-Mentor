@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('./todo-app/todo-app.module').then(m => m.TodoAppModule)
+  },
+  {
     path: 'e-commerce-product-page',
     loadChildren: () => import('./e-commerce-product-page/e-commerce-product-page.module').then(m => m.ECommerceProductPageModule)
   },
