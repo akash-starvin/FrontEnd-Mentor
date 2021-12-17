@@ -11,7 +11,7 @@ import { Todo } from '../../interface/todo';
 export class HomeComponent implements OnInit {
   LOCAL_STORAGE_KEY: string = 'TodoList';
 
-  isDarkMode: boolean = false;
+  isDarkMode: boolean = true;
   userInput: string = '';
   selectedFilter: string = 'all';
   displayTodoList: Todo[] = [];
